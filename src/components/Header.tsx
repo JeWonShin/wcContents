@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import OkSalsuLogo from "@/components/OkSalsuLogo";
 
 const nav = [
   { href: "/", label: "홈" },
@@ -20,12 +21,8 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-sm border-b border-brand-light">
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-2xl">💧</span>
-          <div className="leading-tight">
-            <div className="font-black text-brand-primary text-lg leading-none">OK살수</div>
-            <div className="text-[10px] text-brand-gray leading-none">살수차·급수차 전문</div>
-          </div>
+        <Link href="/">
+          <OkSalsuLogo size="md" />
         </Link>
 
         {/* Desktop nav */}

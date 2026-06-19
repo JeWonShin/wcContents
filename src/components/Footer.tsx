@@ -1,4 +1,5 @@
 import Link from "next/link";
+import OkSalsuLogo from "@/components/OkSalsuLogo";
 
 const PHONE = "010-4894-5037";
 
@@ -9,12 +10,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-2xl">💧</span>
-              <div>
-                <div className="font-black text-xl">OK살수</div>
-                <div className="text-brand-light text-xs">살수차·급수차 전문</div>
-              </div>
+            <div className="mb-3">
+              <OkSalsuLogo size="md" dark={true} />
             </div>
             <p className="text-brand-light text-sm leading-relaxed">
               평택·안중 살수차·급수차 전문 업체.
