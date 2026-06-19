@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "서비스 안내 | ○○살수",
+  title: "서비스 안내 | OK살수",
   description: "공사·건설현장 살수, 조경·농업 급수, 생활·행사 용수, 특수살수 서비스 안내.",
 };
 
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <div className="mt-6 flex gap-3">
-                  <a href="tel:03100000000" className="btn-cta text-sm">📞 전화 문의</a>
+                  <a href="tel:01048945037" className="btn-cta text-sm">📞 전화 문의</a>
                   <Link href="/contact" className="btn-cta-outline text-sm">📋 견적 요청</Link>
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function ServicesPage() {
           <p className="text-xl font-bold mb-2">어떤 현장이든 상담해 드립니다</p>
           <p className="text-blue-200 text-sm mb-5">목록에 없는 작업도 문의해 주시면 최적의 방법을 안내해 드립니다.</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:03100000000" className="btn-cta bg-phone">📞 031-000-0000</a>
+            <a href="tel:01048945037" className="btn-cta bg-phone">📞 010-4894-5037</a>
             <Link href="/pricing" className="btn-cta bg-white text-brand-primary">💰 단가표 보기</Link>
           </div>
         </div>

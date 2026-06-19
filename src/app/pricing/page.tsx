@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "단가표 | ○○살수 – 살수차·급수차 요금 안내",
-  description: "○○살수 살수차·급수차 단가표. 톤수별·작업 유형별 일대/월대 기준 요금 안내.",
+  title: "단가표 | OK살수 – 살수차·급수차 요금 안내",
+  description: "OK살수 살수차·급수차 단가표. 톤수별·작업 유형별 일대/월대 기준 요금 안내.",
 };
 
 const dailyPrices = [
@@ -138,7 +138,7 @@ export default function PricingPage() {
           <p className="text-xl font-bold mb-2">정확한 견적이 필요하신가요?</p>
           <p className="text-blue-200 text-sm mb-5">현장 정보를 알려주시면 맞춤 견적을 바로 안내해 드립니다.</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:03100000000" className="btn-cta bg-phone">📞 전화 견적</a>
+            <a href="tel:01048945037" className="btn-cta bg-phone">📞 전화 견적</a>
             <Link href="/contact" className="btn-cta bg-white text-brand-primary">📋 온라인 견적</Link>
           </div>
         </div>

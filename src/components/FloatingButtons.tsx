@@ -1,6 +1,6 @@
 "use client";
 
-const PHONE = "031-000-0000";
+const PHONE = "010-4894-5037";
 const KAKAO_CHANNEL_URL = "https://pf.kakao.com/_placeholder";
 
 export default function FloatingButtons() {

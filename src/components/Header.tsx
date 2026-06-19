@@ -11,7 +11,7 @@ const nav = [
   { href: "/contact", label: "고객센터" },
 ];
 
-const PHONE = "031-000-0000";
+const PHONE = "010-4894-5037";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -23,7 +23,7 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-2">
           <span className="text-2xl">💧</span>
           <div className="leading-tight">
-            <div className="font-black text-brand-primary text-lg leading-none">○○살수</div>
+            <div className="font-black text-brand-primary text-lg leading-none">OK살수</div>
             <div className="text-[10px] text-brand-gray leading-none">살수차·급수차 전문</div>
           </div>
         </Link>

@@ -63,7 +63,7 @@ export default function QuoteForm() {
         <p className="text-gray-600 text-sm">
           빠른 시간 내 담당자가 연락 드리겠습니다.
           <br />
-          긴급 문의는 <a href="tel:03100000000" className="text-brand-accent font-bold">031-000-0000</a>으로 전화해 주세요.
+          긴급 문의는 <a href="tel:01048945037" className="text-brand-accent font-bold">010-4894-5037</a>으로 전화해 주세요.
         </p>
       </div>
     );
@@ -112,7 +112,7 @@ export default function QuoteForm() {
           value={form.address}
           onChange={handleChange}
           required
-          placeholder="경기도 ○○시 ○○구 ○○로 000"
+          placeholder="경기도 평택시 안중읍 송담3로 56-15"
           className="w-full border border-brand-light rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent"
         />
       </div>

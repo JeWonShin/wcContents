@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "회사소개 | ○○살수 – 살수차·급수차 전문",
-  description: "○○살수 회사소개. 창업 이력, 보유 장비, 인증·면허 현황.",
+  title: "회사소개 | OK살수 – 살수차·급수차 전문",
+  description: "OK살수 회사소개. 창업 이력, 보유 장비, 인증·면허 현황.",
 };
 
 const equipment = [
@@ -28,7 +28,7 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-black text-brand-primary mb-3">회사소개</h1>
           <p className="text-brand-gray">
-            수도권·경기 지역 살수차·급수차 전문 업체, ○○살수를 소개합니다.
+            수도권·경기 지역 살수차·급수차 전문 업체, OK살수를 소개합니다.
           </p>
         </div>
       </section>
@@ -39,11 +39,11 @@ export default function AboutPage() {
           <h2 className="section-title border-l-4 border-brand-accent pl-3">인사말</h2>
           <div className="card mt-4">
             <p className="text-gray-700 leading-relaxed">
-              안녕하세요, ○○살수 대표입니다.
+              안녕하세요, OK살수 대표입니다.
             </p>
             <br />
             <p className="text-gray-700 leading-relaxed">
-              저희 ○○살수는 수도권·경기 지역을 기반으로 <strong>살수차·급수차 전문 서비스</strong>를 제공하고 있습니다.
+              저희 OK살수는 수도권·경기 지역을 기반으로 <strong>살수차·급수차 전문 서비스</strong>를 제공하고 있습니다.
               공사현장의 비산먼지 저감부터 조경·농업 급수, 생활용수 공급, 행사 지원까지 다양한 현장에서
               빠르고 안전하게 대응해 왔습니다.
             </p>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </p>
             <br />
             <p className="text-gray-700 font-bold">
-              — ○○살수 대표 일동
+              — OK살수 대표 일동
             </p>
           </div>
         </div>
@@ -117,7 +117,7 @@ export default function AboutPage() {
         <div className="max-w-xl mx-auto px-4 text-center text-white">
           <p className="text-xl font-bold mb-4">지금 바로 문의해 보세요</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:03100000000" className="btn-cta bg-phone">📞 전화 상담</a>
+            <a href="tel:01048945037" className="btn-cta bg-phone">📞 전화 상담</a>
             <Link href="/contact" className="btn-cta bg-white text-brand-primary">📋 견적 문의</Link>
           </div>
         </div>

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "현장 갤러리 | ○○살수",
-  description: "○○살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
+  title: "현장 갤러리 | OK살수",
+  description: "OK살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
 };
 
 const categories = ["전체", "공사·현장", "조경·농업", "생활·행사", "특수살수"];
@@ -87,10 +87,10 @@ export default function GalleryPage() {
           <p className="text-xl font-bold mb-2">비슷한 현장이 있으신가요?</p>
           <p className="text-blue-200 text-sm mb-5">현장 사진을 보내주시면 맞춤 견적을 드립니다.</p>
           <a
-            href="tel:03100000000"
+            href="tel:01048945037"
             className="inline-flex items-center gap-2 bg-phone text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:bg-green-600"
           >
-            📞 031-000-0000
+            📞 010-4894-5037
           </a>
         </div>
       </section>

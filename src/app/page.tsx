@@ -2,12 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "○○살수 | 살수차·급수차 전문 – 수도권·경기 즉시 배차",
+  title: "OK살수 | 살수차·급수차 전문 – 수도권·경기 즉시 배차",
   description:
     "공사현장 비산먼지 저감부터 조경·급수, 행사용수까지. 수도권·경기 30분 내 즉시 배차. 24시간 온라인 견적 접수.",
 };
 
-const PHONE = "031-000-0000";
+const PHONE = "010-4894-5037";
 
 const quickMenus = [
   { icon: "🚧", label: "공사·현장", href: "/services#construction" },
@@ -62,15 +62,15 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center text-white px-4 max-w-2xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-5 backdrop-blur-sm">
-            📍 수도권 · 경기 전 지역 즉시 배차
+            📍 평택 · 안중 · 수도권 전 지역 즉시 배차
           </div>
           <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
             살수차 · 급수차<br />
             <span className="text-yellow-300">30분 내</span> 즉시 출동
           </h1>
           <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-            공사현장 비산먼지 저감부터 조경·급수, 행사용수까지
-            <br />경력 10년 이상 전문 기사가 직접 출동합니다.
+            도로살수·조경급수·식수운반·비상출동까지
+            <br />살수차 다량 보유, 대표 직접 출동합니다.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
@@ -119,7 +119,7 @@ export default function HomePage() {
       <section className="py-14 bg-brand-bg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="section-title">왜 ○○살수인가요?</h2>
+            <h2 className="section-title">왜 OK살수를 선택하나요?</h2>
             <p className="section-subtitle">고객이 신뢰하는 3가지 이유</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
