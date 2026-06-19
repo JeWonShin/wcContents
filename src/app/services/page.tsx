@@ -110,6 +110,38 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* 연계 서비스 */}
+      <section className="py-14 bg-brand-bg border-t border-brand-light">
+        <div className="max-w-5xl mx-auto px-4 text-center">
+          <h2 className="section-title mb-2">연계 서비스 안내</h2>
+          <p className="section-subtitle mb-8">
+            포크레인·조경건설 문의도 연결해 드립니다
+          </p>
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
+            <div className="card flex flex-col items-center gap-3 py-8">
+              <span className="text-5xl">🏗️</span>
+              <h3 className="font-bold text-brand-primary text-lg">포크레인 작업 문의</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                터파기·굴착·적재 등 포크레인이 필요한 현장.<br />협력 업체를 통해 빠르게 연결해 드립니다.
+              </p>
+              <a href="tel:01048945037" className="btn-cta mt-2">📞 전화 연결</a>
+            </div>
+            <div className="card flex flex-col items-center gap-3 py-8">
+              <span className="text-5xl">🌿</span>
+              <h3 className="font-bold text-brand-primary text-lg">조경건설 문의</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                조경 시공·식재·정원 조성 등 조경건설이 필요한 경우.<br />전문 업체로 연결해 드립니다.
+              </p>
+              <a href="tel:01048945037" className="btn-cta mt-2">📞 전화 연결</a>
+            </div>
+          </div>
+          <p className="text-sm text-brand-gray">
+            ※ 포크레인·조경건설은 직접 시공이 아닌 <strong>협력 업체 연결</strong> 서비스입니다.<br />
+            동일 번호(<a href="tel:01048945037" className="text-brand-accent hover:underline">010-4894-5037</a>)로 문의 주시면 안내해 드립니다.
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-brand-primary py-10">
         <div className="max-w-xl mx-auto px-4 text-center text-white">
