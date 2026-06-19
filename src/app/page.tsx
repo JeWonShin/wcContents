@@ -100,7 +100,7 @@ export default function HomePage() {
       {/* ② Quick Menu */}
       <section className="bg-white py-6 shadow-sm">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-around md:justify-center md:gap-12">
+          <div className="grid grid-cols-4 gap-y-4 md:flex md:justify-center md:gap-10">
             {quickMenus.map((m) => (
               <Link
                 key={m.href}
@@ -110,7 +110,7 @@ export default function HomePage() {
                 <div className="w-14 h-14 rounded-full bg-brand-bg flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
                   {m.icon}
                 </div>
-                <span className="text-xs font-medium text-brand-primary">{m.label}</span>
+                <span className="text-xs font-medium text-brand-primary text-center">{m.label}</span>
               </Link>
             ))}
           </div>
