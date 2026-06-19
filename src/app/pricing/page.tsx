@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "단가표 | 경기살수 – 살수차·급수차 요금 안내",
-  description: "경기살수 살수차·급수차 단가표. 톤수별·작업 유형별 일대/월대 기준 요금 안내.",
+  title: "단가표 | ○○살수 – 살수차·급수차 요금 안내",
+  description: "○○살수 살수차·급수차 단가표. 톤수별·작업 유형별 일대/월대 기준 요금 안내.",
 };
 
 const dailyPrices = [

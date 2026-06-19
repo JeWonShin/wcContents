@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import QuoteForm from "@/components/QuoteForm";
 
 export const metadata: Metadata = {
-  title: "고객센터 · 견적 문의 | 경기살수",
+  title: "고객센터 · 견적 문의 | ○○살수",
   description: "살수차·급수차 온라인 견적 문의. 자주 묻는 질문(FAQ).",
 };
 
@@ -79,7 +79,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="font-bold text-gray-800 text-lg">카카오톡 상담</div>
-                    <div className="text-xs text-brand-gray">채널명: 경기살수</div>
+                    <div className="text-xs text-brand-gray">채널명: ○○살수</div>
                   </div>
                 </a>
 

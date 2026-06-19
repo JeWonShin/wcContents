@@ -12,7 +12,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-3">
               <span className="text-2xl">💧</span>
               <div>
-                <div className="font-black text-xl">경기살수</div>
+                <div className="font-black text-xl">○○살수</div>
                 <div className="text-brand-light text-xs">살수차·급수차 전문</div>
               </div>
             </div>
@@ -59,9 +59,9 @@ export default function Footer() {
 
         <div className="border-t border-brand-secondary pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-brand-light">
           <p>
-            상호: 경기살수 | 대표: ○○○ | 사업자등록번호: 000-00-00000
+            상호: ○○살수 | 대표: ○○○ | 사업자등록번호: 000-00-00000
           </p>
-          <p>© 2026 경기살수. All rights reserved.</p>
+          <p>© 2026 ○○살수. All rights reserved.</p>
         </div>
       </div>
     </footer>

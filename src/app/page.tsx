@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "경기살수 | 살수차·급수차 전문 – 수도권·경기 즉시 배차",
+  title: "○○살수 | 살수차·급수차 전문 – 수도권·경기 즉시 배차",
   description:
     "공사현장 비산먼지 저감부터 조경·급수, 행사용수까지. 수도권·경기 30분 내 즉시 배차. 24시간 온라인 견적 접수.",
 };
@@ -119,7 +119,7 @@ export default function HomePage() {
       <section className="py-14 bg-brand-bg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="section-title">왜 경기살수인가요?</h2>
+            <h2 className="section-title">왜 ○○살수인가요?</h2>
             <p className="section-subtitle">고객이 신뢰하는 3가지 이유</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">

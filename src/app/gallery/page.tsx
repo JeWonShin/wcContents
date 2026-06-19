@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "현장 갤러리 | 경기살수",
-  description: "경기살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
+  title: "현장 갤러리 | ○○살수",
+  description: "○○살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
 };
 
 const categories = ["전체", "공사·현장", "조경·농업", "생활·행사", "특수살수"];

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "서비스 안내 | 경기살수",
+  title: "서비스 안내 | ○○살수",
   description: "공사·건설현장 살수, 조경·농업 급수, 생활·행사 용수, 특수살수 서비스 안내.",
 };
 
