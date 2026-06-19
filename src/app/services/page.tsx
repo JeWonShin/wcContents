@@ -63,6 +63,34 @@ const services = [
     ],
     bg: "from-purple-700 to-purple-500",
   },
+  {
+    id: "excavator",
+    icon: "🏗️",
+    title: "포크레인 작업",
+    subtitle: "터파기 · 굴착 · 적재 · 정지",
+    desc: "터파기·굴착·토사 적재 등 포크레인이 필요한 현장에 대응합니다. 규모와 작업 내용을 알려주시면 빠르게 안내해 드립니다.",
+    items: [
+      "건설현장 터파기·굴착",
+      "토사·자재 적재 및 정리",
+      "대지 정지 및 성토 작업",
+      "철거 후 잔재물 처리",
+    ],
+    bg: "from-yellow-700 to-yellow-500",
+  },
+  {
+    id: "landscaping",
+    icon: "🌿",
+    title: "조경건설",
+    subtitle: "조경 시공 · 식재 · 정원 조성",
+    desc: "조경 시공·수목 식재·정원 조성 등 조경건설 전반에 걸친 문의를 받습니다. 현장 규모와 요구사항을 말씀해 주시면 최적의 방향을 안내해 드립니다.",
+    items: [
+      "수목·화초 식재 및 조경 시공",
+      "가로수·공원 조경 공사",
+      "정원·옥상 녹화 조성",
+      "잔디 식재 및 유지관리",
+    ],
+    bg: "from-emerald-700 to-emerald-500",
+  },
 ];
 
 export default function ServicesPage() {
@@ -107,38 +135,6 @@ export default function ServicesPage() {
               </div>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* 연계 서비스 */}
-      <section className="py-14 bg-brand-bg border-t border-brand-light">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="section-title mb-2">연계 서비스 안내</h2>
-          <p className="section-subtitle mb-8">
-            포크레인·조경건설 문의도 연결해 드립니다
-          </p>
-          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-8">
-            <div className="card flex flex-col items-center gap-3 py-8">
-              <span className="text-5xl">🏗️</span>
-              <h3 className="font-bold text-brand-primary text-lg">포크레인 작업 문의</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                터파기·굴착·적재 등 포크레인이 필요한 현장.<br />협력 업체를 통해 빠르게 연결해 드립니다.
-              </p>
-              <a href="tel:01048945037" className="btn-cta mt-2">📞 전화 연결</a>
-            </div>
-            <div className="card flex flex-col items-center gap-3 py-8">
-              <span className="text-5xl">🌿</span>
-              <h3 className="font-bold text-brand-primary text-lg">조경건설 문의</h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                조경 시공·식재·정원 조성 등 조경건설이 필요한 경우.<br />전문 업체로 연결해 드립니다.
-              </p>
-              <a href="tel:01048945037" className="btn-cta mt-2">📞 전화 연결</a>
-            </div>
-          </div>
-          <p className="text-sm text-brand-gray">
-            ※ 포크레인·조경건설은 직접 시공이 아닌 <strong>협력 업체 연결</strong> 서비스입니다.<br />
-            동일 번호(<a href="tel:01048945037" className="text-brand-accent hover:underline">010-4894-5037</a>)로 문의 주시면 안내해 드립니다.
-          </p>
         </div>
       </section>
 
