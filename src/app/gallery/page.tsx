@@ -1,25 +1,81 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "현장 갤러리 | OK살수",
   description: "OK살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
 };
 
-const categories = ["전체", "공사·현장", "조경·농업", "생활·행사", "특수살수"];
+const categories = ["전체", "공사·현장", "조경·농업", "차량·대기"];
 
-const items = [
-  { cat: "공사·현장", label: "아파트 신축 현장 비산먼지 저감 살수", bg: "from-orange-800 to-orange-600", date: "2026.06" },
-  { cat: "공사·현장", label: "도로 확포장 공사 먼지 억제", bg: "from-orange-700 to-amber-500", date: "2026.05" },
-  { cat: "조경·농업", label: "공원 가로수 가뭄 급수 지원", bg: "from-green-800 to-green-600", date: "2026.06" },
-  { cat: "조경·농업", label: "골프장 잔디 급수 작업", bg: "from-green-700 to-emerald-500", date: "2026.04" },
-  { cat: "생활·행사", label: "야외 행사장 식수 공급", bg: "from-blue-700 to-blue-500", date: "2026.05" },
-  { cat: "생활·행사", label: "아파트 단수 긴급 급수", bg: "from-sky-700 to-sky-500", date: "2026.03" },
-  { cat: "특수살수", label: "도로 오염 고압 세척 작업", bg: "from-purple-800 to-purple-600", date: "2026.06" },
-  { cat: "공사·현장", label: "철거현장 분진 저감 살수", bg: "from-stone-700 to-stone-500", date: "2026.02" },
-  { cat: "조경·농업", label: "신규 식재 수목 활착 급수", bg: "from-teal-700 to-teal-500", date: "2026.01" },
-  { cat: "생활·행사", label: "드라마 촬영 현장 용수 지원", bg: "from-indigo-700 to-indigo-500", date: "2025.12" },
-  { cat: "특수살수", label: "하절기 도로 쿨링 살수", bg: "from-cyan-700 to-cyan-500", date: "2025.08" },
-  { cat: "공사·현장", label: "대단위 토목 광역 살수", bg: "from-yellow-800 to-yellow-600", date: "2025.07" },
+type PhotoItem = {
+  type: "photo";
+  src: string;
+  alt: string;
+  cat: string;
+  label: string;
+};
+
+type PlaceholderItem = {
+  type: "placeholder";
+  cat: string;
+  label: string;
+  bg: string;
+};
+
+const items: (PhotoItem | PlaceholderItem)[] = [
+  {
+    type: "photo",
+    src: "/gallery/construction-spray.jpeg",
+    alt: "공사현장 비산먼지 저감 살수 작업",
+    cat: "공사·현장",
+    label: "공사현장 고압 살수 — 비산먼지 저감",
+  },
+  {
+    type: "photo",
+    src: "/gallery/truck-dawn.jpeg",
+    alt: "새벽 OK살수 차량 3대 출동 대기",
+    cat: "차량·대기",
+    label: "새벽 출동 대기 — 다량 보유 차량",
+  },
+  {
+    type: "photo",
+    src: "/gallery/landscape-trees.jpeg",
+    alt: "조경 급수 작업 현장 — 수목 급수",
+    cat: "조경·농업",
+    label: "조경 수목 급수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/truck-night.jpeg",
+    alt: "야간 긴급 출동 대기 — OK살수 차량",
+    cat: "차량·대기",
+    label: "야간 긴급 출동 대기",
+  },
+  {
+    type: "placeholder",
+    cat: "공사·현장",
+    label: "도로 확포장 공사 먼지 억제",
+    bg: "from-orange-700 to-amber-500",
+  },
+  {
+    type: "placeholder",
+    cat: "조경·농업",
+    label: "공원 가로수 가뭄 급수 지원",
+    bg: "from-green-800 to-green-600",
+  },
+  {
+    type: "placeholder",
+    cat: "공사·현장",
+    label: "아파트 신축현장 비산먼지 저감",
+    bg: "from-orange-800 to-orange-600",
+  },
+  {
+    type: "placeholder",
+    cat: "조경·농업",
+    label: "신규 식재 수목 활착 급수",
+    bg: "from-teal-700 to-teal-500",
+  },
 ];
 
 export default function GalleryPage() {
@@ -33,7 +89,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Category Filter (UI only) */}
+      {/* Category Filter */}
       <section className="py-6 border-b border-brand-light bg-white sticky top-16 z-30">
         <div className="max-w-5xl mx-auto px-4 flex gap-2 overflow-x-auto pb-1">
           {categories.map((c, i) => (
@@ -55,28 +111,49 @@ export default function GalleryPage() {
       <section className="py-10">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {items.map((item, i) => (
-              <div
-                key={i}
-                className={`relative aspect-square rounded-xl bg-gradient-to-br ${item.bg} overflow-hidden group cursor-pointer`}
-              >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-200" />
-                <div className="absolute inset-0 flex flex-col justify-between p-3">
-                  <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                    {item.cat}
-                  </span>
-                  <div>
-                    <p className="text-white text-xs font-bold leading-tight">{item.label}</p>
-                    <p className="text-white/60 text-[10px] mt-0.5">{item.date}</p>
+            {items.map((item, i) =>
+              item.type === "photo" ? (
+                <div
+                  key={i}
+                  className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer bg-gray-100"
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    unoptimized
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-200" />
+                  <div className="absolute inset-0 flex flex-col justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                      {item.cat}
+                    </span>
+                    <p className="text-white text-xs font-bold leading-tight drop-shadow">
+                      {item.label}
+                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ) : (
+                <div
+                  key={i}
+                  className={`relative aspect-square rounded-xl bg-gradient-to-br ${item.bg} overflow-hidden group cursor-pointer`}
+                >
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-200" />
+                  <div className="absolute inset-0 flex flex-col justify-between p-3">
+                    <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                      {item.cat}
+                    </span>
+                    <p className="text-white text-xs font-bold leading-tight">{item.label}</p>
+                  </div>
+                </div>
+              )
+            )}
           </div>
 
-          {/* Placeholder note */}
           <div className="mt-8 text-center text-brand-gray text-sm">
-            <p>실제 사진은 운영 시 업로드됩니다. 관리자 페이지에서 쉽게 관리하세요.</p>
+            <p>현장 사진은 계속 업데이트됩니다.</p>
           </div>
         </div>
       </section>
