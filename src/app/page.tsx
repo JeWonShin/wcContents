@@ -13,7 +13,7 @@ const quickMenus = [
   { icon: "🚧", label: "공사·현장", href: "/services#construction" },
   { icon: "🌳", label: "조경·농업", href: "/services#landscape" },
   { icon: "💧", label: "생활·식수", href: "/services#living" },
-  { icon: "🏗️", label: "포크레인", href: "tel:01048945037" },
+  { icon: "🏗️", label: "포크레인", href: "/services#excavator" },
   { icon: "🌿", label: "조경건설", href: "/services#landscaping" },
   { icon: "💰", label: "단가표", href: "/pricing" },
   { icon: "📋", label: "견적 문의", href: "/contact" },
