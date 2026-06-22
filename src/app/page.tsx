@@ -14,7 +14,7 @@ const quickMenus = [
   { icon: "🌳", label: "조경·농업", href: "/services#landscape" },
   { icon: "💧", label: "생활·식수", href: "/services#living" },
   { icon: "🏗️", label: "포크레인", href: "tel:01048945037" },
-  { icon: "🌿", label: "조경건설", href: "tel:01048945037" },
+  { icon: "🌿", label: "조경건설", href: "/services#landscaping" },
   { icon: "💰", label: "단가표", href: "/pricing" },
   { icon: "📋", label: "견적 문의", href: "/contact" },
 ];
@@ -25,21 +25,43 @@ const stats = [
   { value: "多", unit: "대 보유", label: "살수차 다량" },
 ];
 
+const painPoints = [
+  {
+    emoji: "🚨",
+    text: "건설현장 비산먼지 민원·관청 점검이 내일인데 살수차를 못 구했다",
+  },
+  {
+    emoji: "🌵",
+    text: "가뭄으로 가로수·조경수목이 말라가고 있다 — 지금 당장 급수가 필요하다",
+  },
+  {
+    emoji: "💦",
+    text: "아파트·빌딩 단수로 주민 민원이 폭발 직전, 긴급 급수차가 필요하다",
+  },
+  {
+    emoji: "🏗️",
+    text: "포크레인이나 조경공사 업체를 빠르게 구해야 하는데 연락처를 모른다",
+  },
+];
+
 const trustPoints = [
   {
     icon: "🚛",
-    title: "살수차 다량 보유",
-    desc: "3.5톤~16톤 고압 살수·급수차 상시 대기. 차량 부족 없이 즉시 배차합니다.",
+    title: "즉시 배차 · 차량 부족 없음",
+    desc: "3.5톤~16톤 전문 살수·급수차 다량 보유. 동시 여러 현장도 배차 가능합니다.",
+    badge: "다량 상시 대기",
   },
   {
     icon: "🔬",
-    title: "KOTITI 수질검사 필증",
-    desc: "공인 기관 수질 검사 완료. 안전하고 위생적인 물로 작업합니다.",
+    title: "KOTITI 수질검사 필증 완료",
+    desc: "공인 기관 수질 검사 완료. 식수·조경 급수에 안전한 물을 공급합니다.",
+    badge: "공인 수질 인증",
   },
   {
-    icon: "📋",
-    title: "투명한 단가",
-    desc: "협회 기준 단가 공개. 숨겨진 비용 없이 견적부터 명확하게 안내합니다.",
+    icon: "💰",
+    title: "협회 기준 투명한 단가",
+    desc: "숨겨진 추가 비용 없이 협회 기준 단가를 공개합니다. 견적부터 명확합니다.",
+    badge: "단가표 공개",
   },
 ];
 
@@ -51,6 +73,25 @@ const equipment = [
 ];
 
 const serviceArea = ["평택", "안중", "화성", "안성", "천안", "아산"];
+
+const faq = [
+  {
+    q: "얼마나 빨리 출동할 수 있나요?",
+    a: "평택·안중 기준 30분, 화성·안성·천안·아산 기준 1시간 이내 도착을 목표로 합니다. 차량 위치·교통 상황에 따라 달라질 수 있으니 전화로 확인해 주세요.",
+  },
+  {
+    q: "야간·주말·공휴일에도 출동 가능한가요?",
+    a: "가능합니다. 야간(21:00~06:00) 및 공휴일 작업 시 할증이 적용됩니다. 24시간 견적 접수 중이니 언제든지 연락 주세요.",
+  },
+  {
+    q: "물은 어디서 공급하나요? 수질이 안전한가요?",
+    a: "자체 급수 차량으로 이동합니다. KOTITI 공인 수질검사를 완료한 물을 사용하며, 식수 운반도 안전하게 진행합니다.",
+  },
+  {
+    q: "살수차 외에 포크레인·조경공사도 문의할 수 있나요?",
+    a: "네, 포크레인 작업과 조경건설 시공도 문의 가능합니다. 모든 문의는 동일 번호(010-4894-5037)로 접수됩니다.",
+  },
+];
 
 export default function HomePage() {
   return (
@@ -64,55 +105,51 @@ export default function HomePage() {
         &nbsp;·&nbsp; 평택·안중·화성·안성·천안·아산
       </div>
 
-      {/* ① Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent overflow-hidden">
-        {/* 배경 글로우 */}
+      {/* ① Hero — 도입: 3초 안에 '무엇을', '내게 무슨 이득인지' */}
+      <section className="relative min-h-[88vh] flex items-center justify-center bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
         </div>
 
         <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-          {/* 배지 */}
           <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-white/20">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             지금 출동 가능
           </div>
 
-          {/* 메인 헤드라인 */}
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] mb-5 tracking-tight">
-            물이 필요한 곳!
+            물 문제,
             <br />
-            <span className="text-yellow-300">어디라도</span>
+            전화 <span className="text-yellow-300">한 통</span>으로
             <br />
-            달려갑니다
+            해결됩니다
           </h1>
 
-          <p className="text-blue-100 text-base sm:text-lg mb-3 font-semibold">
+          <p className="text-blue-100 text-base sm:text-lg mb-2 font-semibold">
             살수차·급수차 전문 OK살수 &nbsp;|&nbsp; 신속·정확·안전
           </p>
           <p className="text-white/70 text-sm mb-8 leading-relaxed">
-            작은 일이라도 믿고 맡겨주신 만큼 완벽한 작업으로 보답해 드리겠습니다.
+            평택·안중 기준 <strong className="text-yellow-300 font-bold">30분 내 출동</strong>
+            &nbsp;·&nbsp; 3.5톤~16톤 전문 차량 다량 보유 &nbsp;·&nbsp; 24시간 견적 접수
           </p>
 
-          {/* CTA 버튼 */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE.replace(/-/g, "")}`}
               className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-black text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:bg-green-600 active:scale-95"
             >
-              📞 {PHONE} 즉시 전화
+              📞 {PHONE} 지금 전화
             </a>
             <Link
               href="/contact"
               className="flex items-center justify-center gap-2 bg-white text-brand-primary font-black text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:bg-yellow-50 active:scale-95"
             >
-              📋 24시간 견적 문의
+              📋 무료 견적 받기
             </Link>
           </div>
         </div>
 
-        {/* 물결 SVG 구분선 */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
           <svg
             viewBox="0 0 1440 52"
@@ -145,13 +182,55 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ③ Quick Menu */}
-      <section className="bg-white py-7 shadow-sm">
+      {/* ③ Pain Point — 공감: 고객의 상황 짚어주기 */}
+      <section className="py-14 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">
+              혹시 지금 <span className="text-red-600">이런 상황</span>인가요?
+            </h2>
+            <p className="text-brand-gray text-sm">급할수록 빠른 판단이 중요합니다</p>
+          </div>
+          <div className="space-y-3 mb-8">
+            {painPoints.map((p) => (
+              <div
+                key={p.text}
+                className="flex items-start gap-4 bg-red-50 border border-red-100 rounded-xl px-5 py-4"
+              >
+                <span className="text-2xl leading-none flex-shrink-0">{p.emoji}</span>
+                <p className="text-gray-800 text-sm font-medium leading-relaxed">{p.text}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center">
+            <a
+              href={`tel:${PHONE.replace(/-/g, "")}`}
+              className="phone-ring inline-flex items-center gap-2 bg-phone text-white font-black text-lg px-10 py-4 rounded-xl shadow-lg hover:bg-green-600 active:scale-95 transition-all"
+            >
+              📞 지금 바로 전화하세요
+            </a>
+            <p className="text-xs text-brand-gray mt-3">
+              통화가 어려우신 경우&nbsp;
+              <Link href="/contact" className="underline underline-offset-2 text-brand-secondary">
+                온라인 견적 폼
+              </Link>
+              을 이용해 주세요
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ④ Quick Menu */}
+      <section className="bg-brand-bg py-7 border-y border-brand-light">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-4 gap-y-5 md:flex md:justify-center md:gap-10">
             {quickMenus.map((m) => (
-              <Link key={m.href} href={m.href} className="flex flex-col items-center gap-1.5 group">
-                <div className="w-14 h-14 rounded-full bg-brand-bg flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
+              <Link
+                key={m.label}
+                href={m.href}
+                className="flex flex-col items-center gap-1.5 group"
+              >
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
                   {m.icon}
                 </div>
                 <span className="text-xs font-medium text-brand-primary text-center">
@@ -163,8 +242,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ④ Trust Section */}
-      <section className="py-16 bg-brand-bg">
+      {/* ⑤ Trust — 해결: 왜 OK살수인가 */}
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-title">왜 OK살수를 선택하나요?</h2>
@@ -174,16 +253,27 @@ export default function HomePage() {
             {trustPoints.map((t) => (
               <div key={t.title} className="card text-center hover:shadow-md transition-shadow">
                 <div className="text-4xl mb-3">{t.icon}</div>
+                <div className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-3 py-1 rounded-full mb-2">
+                  {t.badge}
+                </div>
                 <h3 className="font-bold text-brand-primary text-lg mb-2">{t.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{t.desc}</p>
               </div>
             ))}
           </div>
+          <div className="text-center mt-8">
+            <a
+              href={`tel:${PHONE.replace(/-/g, "")}`}
+              className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold px-8 py-3 rounded-xl hover:bg-brand-secondary transition-colors shadow-sm"
+            >
+              📞 지금 문의하기
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* ⑤ Equipment Section */}
-      <section className="py-16 bg-white">
+      {/* ⑥ Equipment Section */}
+      <section className="py-16 bg-brand-bg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-title">보유 장비 현황</h2>
@@ -193,7 +283,7 @@ export default function HomePage() {
             {equipment.map((e) => (
               <div
                 key={e.name}
-                className="bg-brand-bg border border-brand-light rounded-xl p-5 text-center hover:shadow-md hover:border-brand-accent transition-all"
+                className="bg-white border border-brand-light rounded-xl p-5 text-center hover:shadow-md hover:border-brand-accent transition-all"
               >
                 <div className="text-4xl mb-3">{e.icon}</div>
                 <div className="font-bold text-brand-primary mb-1">{e.name}</div>
@@ -201,15 +291,44 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-          <div className="text-center mt-7">
+          <div className="text-center mt-7 flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/about" className="btn-cta-outline text-sm">
               전체 장비 보기 →
+            </Link>
+            <a href={`tel:${PHONE.replace(/-/g, "")}`} className="btn-cta text-sm">
+              📞 배차 문의
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ⑦ FAQ — 이탈률 낮추기 */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="section-title">자주 묻는 질문</h2>
+            <p className="section-subtitle">가장 많이 물어보시는 질문들을 모았습니다</p>
+          </div>
+          <div className="space-y-4">
+            {faq.map((f) => (
+              <div key={f.q} className="card border-l-4 border-brand-accent">
+                <p className="font-bold text-brand-primary mb-2">Q. {f.q}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">A. {f.a}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link href="/pricing" className="btn-cta-outline text-sm">
+              단가표 자세히 보기
+            </Link>
+            <Link href="/contact" className="btn-cta text-sm">
+              📋 견적 문의하기
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ⑥ Service Area */}
+      {/* ⑧ Service Area */}
       <section className="py-16 bg-brand-bg">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="section-title">서비스 지역</h2>
@@ -230,7 +349,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑦ CTA Banner */}
+      {/* ⑨ Final CTA Banner — 전환 */}
       <section className="bg-brand-primary py-16">
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-black mb-3">지금 바로 연락하세요</h2>

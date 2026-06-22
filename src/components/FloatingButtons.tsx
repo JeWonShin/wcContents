@@ -21,7 +21,7 @@ export default function FloatingButtons() {
       {/* Phone */}
       <a
         href={`tel:${PHONE.replace(/-/g, "")}`}
-        className="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-phone text-white shadow-xl transition-transform hover:scale-110 active:scale-95"
+        className="phone-ring flex flex-col items-center justify-center w-14 h-14 rounded-full bg-phone text-white shadow-xl transition-transform hover:scale-110 active:scale-95"
         aria-label="전화 상담"
       >
         <span className="text-xl leading-none">📞</span>
