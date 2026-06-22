@@ -129,14 +129,14 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <div className="mt-6 flex gap-3">
-                  <a href="tel:01048945037" className="btn-cta text-sm">
+                  <a href="tel:01048945037" className="btn-cta text-sm whitespace-nowrap">
                     📞 전화 문의
                   </a>
                   <a
                     href="https://open.kakao.com/o/sK8HVKAi"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-cta bg-kakao text-gray-900 text-sm"
+                    className="btn-cta bg-kakao text-gray-900 text-sm whitespace-nowrap"
                   >
                     💬 카카오톡 문의
                   </a>
