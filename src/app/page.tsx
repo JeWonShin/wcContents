@@ -217,10 +217,15 @@ export default function HomePage() {
             </a>
             <p className="text-xs text-brand-gray mt-3">
               통화가 어려우신 경우&nbsp;
-              <Link href="/contact" className="underline underline-offset-2 text-brand-secondary">
-                온라인 견적 폼
-              </Link>
-              을 이용해 주세요
+              <a
+                href="https://open.kakao.com/o/sK8HVKAi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 text-brand-secondary"
+              >
+                카카오톡 문의
+              </a>
+              를 이용해 주세요
             </p>
           </div>
         </div>
@@ -330,9 +335,14 @@ export default function HomePage() {
             <Link href="/pricing" className="btn-cta-outline text-sm">
               단가표 자세히 보기
             </Link>
-            <Link href="/contact" className="btn-cta text-sm">
-              📋 견적 문의하기
-            </Link>
+            <a
+              href="https://open.kakao.com/o/sK8HVKAi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta text-sm"
+            >
+              💬 카카오톡 문의
+            </a>
           </div>
         </div>
       </section>
@@ -363,7 +373,7 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
           <h2 className="text-2xl md:text-3xl font-black mb-3">지금 바로 연락하세요</h2>
           <p className="text-blue-200 mb-8">
-            통화가 어려운 시간에도 온라인 견적 폼으로 24시간 접수 가능합니다.
+            통화가 어려운 시간에도 카카오톡으로 24시간 접수 가능합니다.
             <br />
             빠른 시간 내 회신 드리겠습니다.
           </p>
@@ -374,12 +384,14 @@ export default function HomePage() {
             >
               📞 {PHONE}
             </a>
-            <Link
-              href="/contact"
+            <a
+              href="https://open.kakao.com/o/sK8HVKAi"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-white text-brand-primary font-bold px-8 py-4 rounded-xl transition hover:bg-brand-bg active:scale-95"
             >
-              📋 온라인 견적 문의
-            </Link>
+              💬 카카오톡 문의
+            </a>
           </div>
         </div>
       </section>

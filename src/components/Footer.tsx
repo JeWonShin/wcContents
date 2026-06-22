@@ -53,9 +53,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition">
-                  온라인 견적 문의
-                </Link>
+                <a
+                  href="https://open.kakao.com/o/sK8HVKAi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  카카오톡 문의
+                </a>
               </li>
               <li>
                 <Link href="/privacy" className="hover:text-white transition">

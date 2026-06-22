@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "단가표 | OK살수 – 살수차·급수차 요금 안내",
@@ -148,9 +147,14 @@ export default function PricingPage() {
             <a href="tel:01048945037" className="btn-cta bg-phone">
               📞 전화 견적
             </a>
-            <Link href="/contact" className="btn-cta bg-white text-brand-primary">
-              📋 온라인 견적
-            </Link>
+            <a
+              href="https://open.kakao.com/o/sK8HVKAi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta bg-white text-brand-primary"
+            >
+              💬 카카오톡 문의
+            </a>
           </div>
         </div>
       </section>

@@ -132,9 +132,14 @@ export default function ServicesPage() {
                   <a href="tel:01048945037" className="btn-cta text-sm">
                     📞 전화 문의
                   </a>
-                  <Link href="/contact" className="btn-cta-outline text-sm">
-                    📋 견적 요청
-                  </Link>
+                  <a
+                    href="https://open.kakao.com/o/sK8HVKAi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-cta-outline text-sm"
+                  >
+                    💬 카카오톡 문의
+                  </a>
                 </div>
               </div>
             </div>
