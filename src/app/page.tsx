@@ -123,23 +123,24 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ① Hero — 도입: 3초 안에 '무엇을', '내게 무슨 이득인지' */}
-      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+      {/* ① Hero */}
+      <section className="relative overflow-hidden">
+        {/* 배경 이미지 — 전체 비율 유지 */}
         <img
           src="/wcContents/hero-bg.jpeg"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          alt="OK살수 — 어디든 달려갑니다"
+          className="w-full h-auto block"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/40" />
 
-        <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-white/20">
+        {/* 텍스트 오버레이 */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center text-white px-4">
+          <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 backdrop-blur-sm border border-white/20">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             지금 출동 가능
           </div>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-black leading-[1.05] mb-5 tracking-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-black leading-[1.05] mb-3 tracking-tight drop-shadow-lg">
             물 문제,
             <br />
             전화 <span className="text-yellow-300">한 통</span>으로
@@ -147,28 +148,13 @@ export default function HomePage() {
             해결됩니다
           </h1>
 
-          <p className="text-blue-100 text-base sm:text-lg mb-2 font-semibold">
+          <p className="text-blue-100 text-sm sm:text-lg font-semibold drop-shadow">
             살수차·급수차 전문 OK살수 &nbsp;|&nbsp; 신속·정확·안전
           </p>
-          <p className="text-white/70 text-sm mb-8 leading-relaxed">
-            평택·안중 기준 <strong className="text-yellow-300 font-bold">30분 내 출동</strong>
-            &nbsp;·&nbsp; 5톤·16톤 전문 차량 다량 보유 &nbsp;·&nbsp; 24시간 견적 접수
+          <p className="text-white/80 text-xs sm:text-sm mt-1 drop-shadow">
+            평택·안중 기준 <strong className="text-yellow-300">30분 내 출동</strong>
+            &nbsp;·&nbsp; 5톤·16톤 다량 보유 &nbsp;·&nbsp; 24시간 견적 접수
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
-              href={`tel:${PHONE.replace(/-/g, "")}`}
-              className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-black text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:bg-green-600 active:scale-95"
-            >
-              📞 {PHONE} 지금 전화
-            </a>
-            <Link
-              href="/contact"
-              className="flex items-center justify-center gap-2 bg-white text-brand-primary font-black text-lg px-8 py-4 rounded-xl shadow-xl transition-all hover:bg-yellow-50 active:scale-95"
-            >
-              📋 무료 견적 받기
-            </Link>
-          </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
@@ -176,7 +162,7 @@ export default function HomePage() {
             viewBox="0 0 1440 52"
             xmlns="http://www.w3.org/2000/svg"
             preserveAspectRatio="none"
-            className="w-full h-12 sm:h-14"
+            className="w-full h-10 sm:h-14"
           >
             <path
               d="M0,26 C240,52 480,0 720,26 C960,52 1200,0 1440,26 L1440,52 L0,52 Z"
