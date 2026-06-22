@@ -104,36 +104,38 @@ export default function AboutPage() {
           <p className="text-brand-gray text-sm mb-6">
             상시 대기 중인 전문 차량으로 즉시 출동합니다.
           </p>
-          <div className="overflow-x-auto">
-            <table className="price-table">
-              <thead>
-                <tr>
-                  <th>차종</th>
-                  <th>탱크 용량</th>
-                  <th>장비 사양</th>
-                  <th>주요 용도</th>
-                  <th>보유</th>
-                </tr>
-              </thead>
-              <tbody>
-                {equipment.map((e) => (
-                  <tr key={e.name}>
-                    <td className="whitespace-nowrap">
-                      <span className="mr-1">{e.icon}</span>
-                      <strong>{e.name}</strong>
-                    </td>
-                    <td>{e.tank}</td>
-                    <td>{e.spec}</td>
-                    <td className="text-sm text-gray-600">{e.use}</td>
-                    <td>
-                      <span className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-2 py-0.5 rounded-full">
-                        {e.badge}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid sm:grid-cols-2 gap-5">
+            {equipment.map((e) => (
+              <div key={e.name} className="card">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-4xl">{e.icon}</span>
+                  <div>
+                    <div className="font-black text-brand-primary text-lg">{e.name}</div>
+                    <span className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-2 py-0.5 rounded-full mt-0.5">
+                      {e.badge}
+                    </span>
+                  </div>
+                </div>
+                <table className="text-sm w-full">
+                  <tbody>
+                    <tr>
+                      <td className="text-gray-500 pr-4 py-1 whitespace-nowrap">탱크 용량</td>
+                      <td className="font-medium">{e.tank}</td>
+                    </tr>
+                    <tr>
+                      <td className="text-gray-500 pr-4 py-1 whitespace-nowrap">장비 사양</td>
+                      <td className="font-medium">{e.spec}</td>
+                    </tr>
+                    <tr>
+                      <td className="text-gray-500 pr-4 py-1 whitespace-nowrap align-top">
+                        주요 용도
+                      </td>
+                      <td className="text-gray-600 text-xs leading-relaxed">{e.use}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            ))}
           </div>
         </div>
       </section>
