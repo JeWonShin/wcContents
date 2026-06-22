@@ -21,17 +21,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <img
-            src="/wcContents/logo.jpeg"
-            alt="OK살수 로고"
-            style={{
-              width: 130,
-              height: 44,
-              objectFit: "cover",
-              objectPosition: "38% 5%",
-              borderRadius: 4,
-            }}
-          />
+          <img src="/wcContents/logo.png" alt="OK살수 로고" style={{ height: 44, width: "auto" }} />
         </Link>
 
         {/* Desktop nav */}

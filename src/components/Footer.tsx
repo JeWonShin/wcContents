@@ -1,5 +1,4 @@
 import Link from "next/link";
-import OkSalsuLogo from "@/components/OkSalsuLogo";
 
 const PHONE = "010-4894-5037";
 
@@ -11,7 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-3">
-              <OkSalsuLogo size="md" dark={true} />
+              <img
+                src="/wcContents/logo.png"
+                alt="OK살수 로고"
+                style={{ height: 40, width: "auto", filter: "brightness(0) invert(1)" }}
+              />
             </div>
             <p className="text-brand-light text-sm leading-relaxed">
               평택·안중 살수차·급수차 전문 업체.
