@@ -11,13 +11,7 @@ interface FormData {
   privacy: boolean;
 }
 
-const vehicleOptions = [
-  "3.5톤 살수차",
-  "5톤 급수차",
-  "8톤 살수차",
-  "16톤 살수차",
-  "미정 (상담 후 결정)",
-];
+const vehicleOptions = ["5톤 살수·급수차", "16톤 살수차 (물대포)", "미정 (상담 후 결정)"];
 
 export default function QuoteForm() {
   const [form, setForm] = useState<FormData>({
@@ -63,7 +57,11 @@ export default function QuoteForm() {
         <p className="text-gray-600 text-sm">
           빠른 시간 내 담당자가 연락 드리겠습니다.
           <br />
-          긴급 문의는 <a href="tel:01048945037" className="text-brand-accent font-bold">010-4894-5037</a>으로 전화해 주세요.
+          긴급 문의는{" "}
+          <a href="tel:01048945037" className="text-brand-accent font-bold">
+            010-4894-5037
+          </a>
+          으로 전화해 주세요.
         </p>
       </div>
     );
@@ -138,7 +136,9 @@ export default function QuoteForm() {
           >
             <option value="">선택해 주세요</option>
             {vehicleOptions.map((v) => (
-              <option key={v} value={v}>{v}</option>
+              <option key={v} value={v}>
+                {v}
+              </option>
             ))}
           </select>
         </div>
@@ -160,9 +160,12 @@ export default function QuoteForm() {
       <div className="bg-brand-bg rounded-lg p-3 text-xs text-gray-600">
         <p className="font-bold text-brand-primary mb-1">개인정보 수집·이용 동의 (필수)</p>
         <p className="leading-relaxed">
-          수집 항목: 이름, 연락처, 현장주소<br />
-          수집 목적: 견적 상담 및 서비스 안내<br />
-          보유 기간: 문의 처리 완료 후 6개월<br />
+          수집 항목: 이름, 연락처, 현장주소
+          <br />
+          수집 목적: 견적 상담 및 서비스 안내
+          <br />
+          보유 기간: 문의 처리 완료 후 6개월
+          <br />
           귀하는 개인정보 수집·이용을 거부할 권리가 있으나, 거부 시 상담이 불가합니다.
         </p>
         <label className="flex items-center gap-2 mt-2 cursor-pointer">
@@ -173,7 +176,9 @@ export default function QuoteForm() {
             onChange={handleChange}
             className="w-4 h-4 accent-brand-accent"
           />
-          <span className="font-bold text-brand-primary">위 개인정보 수집·이용에 동의합니다. (필수)</span>
+          <span className="font-bold text-brand-primary">
+            위 개인정보 수집·이용에 동의합니다. (필수)
+          </span>
         </label>
       </div>
 
