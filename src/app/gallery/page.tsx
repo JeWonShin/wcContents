@@ -8,8 +8,6 @@ export const metadata: Metadata = {
   description: "OK살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
 };
 
-const categories = ["전체", "공사·현장", "조경·농업", "차량·대기", "생활·행사"];
-
 type PhotoItem = {
   type: "photo";
   src: string;
@@ -109,24 +107,6 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-6 border-b border-brand-light bg-white sticky top-16 z-30">
-        <div className="max-w-5xl mx-auto px-4 flex gap-2 overflow-x-auto pb-1">
-          {categories.map((c, i) => (
-            <button
-              key={c}
-              className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium transition ${
-                i === 0
-                  ? "bg-brand-primary text-white"
-                  : "bg-brand-bg text-brand-gray hover:bg-brand-light"
-              }`}
-            >
-              {c}
-            </button>
-          ))}
-        </div>
-      </section>
-
       {/* Gallery Grid */}
       <section className="py-10">
         <div className="max-w-5xl mx-auto px-4">
@@ -134,18 +114,18 @@ export default function GalleryPage() {
             {items.map((item, i) => (
               <div
                 key={i}
-                className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer bg-gray-100"
+                className="relative aspect-square rounded-xl overflow-hidden bg-gray-100"
               >
                 <Image
                   src={`${BASE_PATH}${item.src}`}
                   alt={item.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover"
                   unoptimized
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-200" />
-                <div className="absolute inset-0 flex flex-col justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <div className="absolute inset-0 bg-black/30" />
+                <div className="absolute inset-0 flex flex-col justify-between p-3">
                   <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
                     {item.cat}
                   </span>
