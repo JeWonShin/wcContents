@@ -40,16 +40,13 @@ export default function ContactPage() {
       <section className="bg-brand-bg py-14 border-b border-brand-light">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-black text-brand-primary mb-3">고객센터</h1>
-          <p className="text-brand-gray">
-            견적 문의, 긴급 출동 요청, 궁금한 점을 해결해 드립니다.
-          </p>
+          <p className="text-brand-gray">견적 문의, 긴급 출동 요청, 궁금한 점을 해결해 드립니다.</p>
         </div>
       </section>
 
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12">
-
             {/* Contact Info */}
             <div>
               <h2 className="section-title border-l-4 border-brand-accent pl-3">연락처 안내</h2>
@@ -69,7 +66,7 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="https://pf.kakao.com/_placeholder"
+                  href="https://open.kakao.com/o/sK8HVKAi"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 card hover:border-yellow-400 transition-colors"
@@ -93,10 +90,22 @@ export default function ContactPage() {
                   <div className="font-bold text-brand-primary mb-2">🕐 운영 시간</div>
                   <table className="text-sm w-full">
                     <tbody>
-                      <tr><td className="text-gray-500 pr-3 py-0.5">평일</td><td className="font-medium">08:00 – 20:00</td></tr>
-                      <tr><td className="text-gray-500 pr-3 py-0.5">토요일</td><td className="font-medium">08:00 – 18:00</td></tr>
-                      <tr><td className="text-gray-500 pr-3 py-0.5">일·공휴일</td><td className="font-medium">긴급 출동 가능 (할증 적용)</td></tr>
-                      <tr><td className="text-gray-500 pr-3 py-0.5">온라인 접수</td><td className="font-medium text-brand-accent">24시간</td></tr>
+                      <tr>
+                        <td className="text-gray-500 pr-3 py-0.5">평일</td>
+                        <td className="font-medium">08:00 – 20:00</td>
+                      </tr>
+                      <tr>
+                        <td className="text-gray-500 pr-3 py-0.5">토요일</td>
+                        <td className="font-medium">08:00 – 18:00</td>
+                      </tr>
+                      <tr>
+                        <td className="text-gray-500 pr-3 py-0.5">일·공휴일</td>
+                        <td className="font-medium">긴급 출동 가능 (할증 적용)</td>
+                      </tr>
+                      <tr>
+                        <td className="text-gray-500 pr-3 py-0.5">온라인 접수</td>
+                        <td className="font-medium text-brand-accent">24시간</td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -105,13 +114,14 @@ export default function ContactPage() {
 
             {/* Quote Form */}
             <div>
-              <h2 className="section-title border-l-4 border-brand-accent pl-3">온라인 견적 문의</h2>
+              <h2 className="section-title border-l-4 border-brand-accent pl-3">
+                온라인 견적 문의
+              </h2>
               <p className="text-brand-gray text-sm mb-4">
                 아래 양식을 작성하시면 담당자가 빠르게 연락드립니다.
               </p>
               <QuoteForm />
             </div>
-
           </div>
         </div>
       </section>
@@ -123,13 +133,12 @@ export default function ContactPage() {
           <p className="section-subtitle text-center">FAQ</p>
           <div className="space-y-4 mt-4">
             {faqs.map((f, i) => (
-              <details
-                key={i}
-                className="card group cursor-pointer"
-              >
+              <details key={i} className="card group cursor-pointer">
                 <summary className="flex justify-between items-center font-bold text-brand-primary list-none cursor-pointer">
                   <span>Q. {f.q}</span>
-                  <span className="text-brand-accent ml-2 flex-shrink-0 text-lg group-open:rotate-45 transition-transform">+</span>
+                  <span className="text-brand-accent ml-2 flex-shrink-0 text-lg group-open:rotate-45 transition-transform">
+                    +
+                  </span>
                 </summary>
                 <p className="mt-3 text-gray-600 text-sm leading-relaxed border-t border-brand-light pt-3">
                   A. {f.a}
