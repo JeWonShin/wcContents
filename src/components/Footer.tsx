@@ -62,11 +62,6 @@ export default function Footer() {
                   카카오톡 문의
                 </a>
               </li>
-              <li>
-                <Link href="/privacy" className="hover:text-white transition">
-                  개인정보처리방침
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
