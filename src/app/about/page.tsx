@@ -53,7 +53,9 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-black text-brand-primary mb-3">회사소개</h1>
           <p className="text-brand-gray">
-            평택·포승·안중·화성·안성·오산·천안·아산 살수차·급수차 전문 업체, OK살수를 소개합니다.
+            평택·포승·안중·화성·안성·오산·천안·아산
+            <br />
+            살수차·급수차 전문 업체, OK살수를 소개합니다.
           </p>
         </div>
       </section>
