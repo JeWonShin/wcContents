@@ -16,7 +16,6 @@ const quickMenus = [
   { icon: "🏗️", label: "포크레인", href: "/services#excavator" },
   { icon: "🌿", label: "조경건설", href: "/services#landscaping" },
   { icon: "💰", label: "단가표", href: "/pricing" },
-  { icon: "📋", label: "견적 문의", href: "/contact" },
 ];
 
 const stats = [
