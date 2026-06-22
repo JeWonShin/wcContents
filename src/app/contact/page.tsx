@@ -44,102 +44,66 @@ export default function ContactPage() {
       </section>
 
       <section className="py-14">
-        <div className="max-w-5xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div>
-              <h2 className="section-title border-l-4 border-brand-accent pl-3">연락처 안내</h2>
-
-              <div className="space-y-4 mt-6">
-                <a
-                  href="tel:01048945037"
-                  className="flex items-center gap-4 card hover:border-brand-accent transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-full bg-phone flex items-center justify-center text-2xl text-white flex-shrink-0">
-                    📞
-                  </div>
-                  <div>
-                    <div className="font-bold text-brand-primary text-lg">010-4894-5037</div>
-                    <div className="text-xs text-brand-gray">전화 한 통이면 즉시 연결됩니다</div>
-                  </div>
-                </a>
-
-                <a
-                  href="https://open.kakao.com/o/sK8HVKAi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 card hover:border-yellow-400 transition-colors"
-                >
-                  <div className="w-12 h-12 rounded-full bg-kakao flex items-center justify-center text-2xl flex-shrink-0">
-                    💬
-                  </div>
-                  <div>
-                    <div className="font-bold text-gray-800 text-lg">카카오톡 상담</div>
-                    <div className="text-xs text-brand-gray">채널명: OK살수</div>
-                  </div>
-                </a>
-
-                <div className="card">
-                  <div className="font-bold text-brand-primary mb-2">📍 위치</div>
-                  <p className="text-sm text-gray-600">경기도 평택시 안중읍 송담3로 56-15</p>
-                  <p className="text-xs text-brand-gray mt-1">방문 상담 전 사전 연락 바랍니다.</p>
-                </div>
-
-                <div className="card">
-                  <div className="font-bold text-brand-primary mb-2">🕐 운영 시간</div>
-                  <table className="text-sm w-full">
-                    <tbody>
-                      <tr>
-                        <td className="text-gray-500 pr-3 py-0.5">평일</td>
-                        <td className="font-medium">08:00 – 20:00</td>
-                      </tr>
-                      <tr>
-                        <td className="text-gray-500 pr-3 py-0.5">토요일</td>
-                        <td className="font-medium">08:00 – 18:00</td>
-                      </tr>
-                      <tr>
-                        <td className="text-gray-500 pr-3 py-0.5">일·공휴일</td>
-                        <td className="font-medium">긴급 출동 가능 (할증 적용)</td>
-                      </tr>
-                      <tr>
-                        <td className="text-gray-500 pr-3 py-0.5">온라인 접수</td>
-                        <td className="font-medium text-brand-accent">24시간</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="section-title border-l-4 border-brand-accent pl-3">연락처 안내</h2>
+          <div className="space-y-4 mt-6">
+            <a
+              href="tel:01048945037"
+              className="flex items-center gap-4 card hover:border-brand-accent transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-phone flex items-center justify-center text-2xl text-white flex-shrink-0">
+                📞
               </div>
-            </div>
+              <div>
+                <div className="font-bold text-brand-primary text-lg">010-4894-5037</div>
+                <div className="text-xs text-brand-gray">전화 한 통이면 즉시 연결됩니다</div>
+              </div>
+            </a>
 
-            {/* KakaoTalk CTA */}
-            <div>
-              <h2 className="section-title border-l-4 border-brand-accent pl-3">카카오톡 상담</h2>
-              <p className="text-brand-gray text-sm mb-6">
-                카카오톡 채널로 문의주시면 빠르게 답변 드립니다.
-              </p>
-              <a
-                href="https://open.kakao.com/o/sK8HVKAi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center gap-4 bg-kakao rounded-2xl p-10 hover:brightness-95 transition-all shadow-md"
-              >
-                <span className="text-6xl">💬</span>
-                <div className="text-center">
-                  <div className="font-black text-gray-900 text-2xl mb-1">카카오톡 채널 상담</div>
-                  <div className="text-gray-700 text-sm">채널명: OK살수 · 24시간 접수</div>
-                </div>
-                <div className="bg-gray-900 text-white font-bold px-8 py-3 rounded-xl text-sm">
-                  카카오톡으로 문의하기
-                </div>
-              </a>
-              <div className="mt-4 text-center">
-                <p className="text-brand-gray text-xs">
-                  카카오톡이 불편하신 경우&nbsp;
-                  <a href="tel:01048945037" className="underline text-brand-secondary font-bold">
-                    010-4894-5037
-                  </a>
-                  으로 전화 주세요.
-                </p>
+            <a
+              href="https://open.kakao.com/o/sK8HVKAi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-4 card hover:border-yellow-400 transition-colors"
+            >
+              <div className="w-12 h-12 rounded-full bg-kakao flex items-center justify-center text-2xl flex-shrink-0">
+                💬
+              </div>
+              <div>
+                <div className="font-bold text-gray-800 text-lg">카카오톡 상담</div>
+                <div className="text-xs text-brand-gray">채널명: OK살수</div>
+              </div>
+            </a>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              <div className="card">
+                <div className="font-bold text-brand-primary mb-2">📍 위치</div>
+                <p className="text-sm text-gray-600">경기도 평택시 안중읍 송담3로 56-15</p>
+                <p className="text-xs text-brand-gray mt-1">방문 상담 전 사전 연락 바랍니다.</p>
+              </div>
+
+              <div className="card">
+                <div className="font-bold text-brand-primary mb-2">🕐 운영 시간</div>
+                <table className="text-sm w-full">
+                  <tbody>
+                    <tr>
+                      <td className="text-gray-500 pr-3 py-0.5">평일</td>
+                      <td className="font-medium">08:00 – 20:00</td>
+                    </tr>
+                    <tr>
+                      <td className="text-gray-500 pr-3 py-0.5">토요일</td>
+                      <td className="font-medium">08:00 – 18:00</td>
+                    </tr>
+                    <tr>
+                      <td className="text-gray-500 pr-3 py-0.5">일·공휴일</td>
+                      <td className="font-medium">긴급 출동 가능 (할증 적용)</td>
+                    </tr>
+                    <tr>
+                      <td className="text-gray-500 pr-3 py-0.5">카카오톡 접수</td>
+                      <td className="font-medium text-brand-accent">24시간</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
