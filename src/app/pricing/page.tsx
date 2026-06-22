@@ -71,27 +71,23 @@ export default function PricingPage() {
           <div>
             <h2 className="section-title border-l-4 border-brand-accent pl-3">일대(日貸) 기준</h2>
             <p className="text-brand-gray text-sm mb-4">1일 8시간 기준 (단거리 이동 포함)</p>
-            <div className="overflow-x-auto">
-              <table className="price-table">
-                <thead>
-                  <tr>
-                    <th>차종 · 톤수</th>
-                    <th>일대 단가</th>
-                    <th>월대 단가</th>
-                    <th>비고</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {dailyPrices.map((r) => (
-                    <tr key={r.type}>
-                      <td className="font-bold">{r.type}</td>
-                      <td className="text-brand-secondary font-bold">{r.daily}</td>
-                      <td>{r.monthly}</td>
-                      <td className="text-xs text-gray-500">{r.note}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {dailyPrices.map((r) => (
+                <div key={r.type} className="card">
+                  <div className="font-black text-brand-primary text-base mb-3">{r.type}</div>
+                  <div className="flex gap-4 mb-3">
+                    <div className="flex-1 bg-brand-bg rounded-lg px-3 py-2 text-center">
+                      <div className="text-xs text-gray-500 mb-1">일대 단가</div>
+                      <div className="font-bold text-brand-secondary">{r.daily}</div>
+                    </div>
+                    <div className="flex-1 bg-brand-bg rounded-lg px-3 py-2 text-center">
+                      <div className="text-xs text-gray-500 mb-1">월대 단가</div>
+                      <div className="font-bold text-brand-secondary">{r.monthly}</div>
+                    </div>
+                  </div>
+                  <p className="text-xs text-gray-500">{r.note}</p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -99,25 +95,17 @@ export default function PricingPage() {
           <div>
             <h2 className="section-title border-l-4 border-brand-accent pl-3">월대(月貸) 기준</h2>
             <p className="text-brand-gray text-sm mb-4">현장 상주 또는 정기 출동 계약 기준</p>
-            <div className="overflow-x-auto">
-              <table className="price-table">
-                <thead>
-                  <tr>
-                    <th>차종</th>
-                    <th>월 단가</th>
-                    <th>조건</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {monthlyPrices.map((r) => (
-                    <tr key={r.type}>
-                      <td className="font-bold">{r.type}</td>
-                      <td className="text-brand-secondary font-bold">{r.range}</td>
-                      <td className="text-xs text-gray-600">{r.comment}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {monthlyPrices.map((r) => (
+                <div key={r.type} className="card">
+                  <div className="font-black text-brand-primary text-base mb-3">{r.type}</div>
+                  <div className="bg-brand-bg rounded-lg px-3 py-2 text-center mb-3">
+                    <div className="text-xs text-gray-500 mb-1">월 단가</div>
+                    <div className="font-bold text-brand-secondary">{r.range}</div>
+                  </div>
+                  <p className="text-xs text-gray-500">{r.comment}</p>
+                </div>
+              ))}
             </div>
           </div>
 
