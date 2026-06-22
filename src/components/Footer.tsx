@@ -15,7 +15,8 @@ export default function Footer() {
             </div>
             <p className="text-brand-light text-sm leading-relaxed">
               평택·안중 살수차·급수차 전문 업체.
-              <br />도로살수, 조경급수, 식수운반, 비상출동까지.
+              <br />
+              도로살수, 조경급수, 식수운반, 비상출동까지.
             </p>
           </div>
 
@@ -39,16 +40,24 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-3">바로가기</h3>
             <ul className="space-y-2 text-brand-light text-sm">
               <li>
-                <Link href="/services" className="hover:text-white transition">서비스 안내</Link>
+                <Link href="/services" className="hover:text-white transition">
+                  서비스 안내
+                </Link>
               </li>
               <li>
-                <Link href="/pricing" className="hover:text-white transition">단가표</Link>
+                <Link href="/pricing" className="hover:text-white transition">
+                  단가표
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition">온라인 견적 문의</Link>
+                <Link href="/contact" className="hover:text-white transition">
+                  온라인 견적 문의
+                </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:text-white transition">개인정보처리방침</Link>
+                <Link href="/privacy" className="hover:text-white transition">
+                  개인정보처리방침
+                </Link>
               </li>
             </ul>
           </div>
@@ -56,7 +65,8 @@ export default function Footer() {
 
         <div className="border-t border-brand-secondary pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-brand-light">
           <p>
-            상호: OK살수 | 대표: 이준희 | 사업자등록번호: 000-00-00000
+            상호: OK살수 | 대표: 이준희 | 사업자등록번호: 209-31-66281 | 일반과세자 |
+            계좌이체·현금·세금계산서 발행
           </p>
           <p>© 2026 OK살수. All rights reserved.</p>
         </div>

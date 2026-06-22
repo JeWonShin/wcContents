@@ -20,7 +20,7 @@ const quickMenus = [
 ];
 
 const stats = [
-  { value: "6", unit: "개 지역", label: "즉시 출동" },
+  { value: "8", unit: "개+", label: "지역 즉시 출동" },
   { value: "24", unit: "시간", label: "긴급 대응" },
   { value: "多", unit: "대 보유", label: "살수차 다량" },
 ];
@@ -66,13 +66,21 @@ const trustPoints = [
 ];
 
 const equipment = [
-  { name: "3.5톤 살수차", spec: "탱크 3,500L · 고압 살수 노즐", icon: "🚛" },
-  { name: "5톤 급수차", spec: "탱크 5,000L · 식수·공사용", icon: "🚚" },
-  { name: "8톤 살수차", spec: "탱크 8,000L · 대형 현장", icon: "🚛" },
-  { name: "16톤 살수차", spec: "탱크 16,000L · 광역 살수", icon: "🚜" },
+  {
+    name: "5톤 살수·급수차",
+    spec: "탱크 5,000L · 살수·식수·공사 급수 겸용",
+    icon: "🚚",
+    badge: "다량 보유",
+  },
+  {
+    name: "16톤 살수차",
+    spec: "탱크 16,000L · 물대포 · 광역 대형 살수",
+    icon: "🚜",
+    badge: "다량 보유",
+  },
 ];
 
-const serviceArea = ["평택", "안중", "화성", "안성", "천안", "아산"];
+const serviceArea = ["평택", "포승", "안중", "화성", "안성", "오산", "천안", "아산"];
 
 const faq = [
   {
@@ -102,7 +110,7 @@ export default function HomePage() {
         <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
           📞 {PHONE}
         </a>{" "}
-        &nbsp;·&nbsp; 평택·안중·화성·안성·천안·아산
+        &nbsp;·&nbsp; 평택·포승·안중·화성·안성·오산·천안·아산
       </div>
 
       {/* ① Hero — 도입: 3초 안에 '무엇을', '내게 무슨 이득인지' */}
@@ -131,7 +139,7 @@ export default function HomePage() {
           </p>
           <p className="text-white/70 text-sm mb-8 leading-relaxed">
             평택·안중 기준 <strong className="text-yellow-300 font-bold">30분 내 출동</strong>
-            &nbsp;·&nbsp; 3.5톤~16톤 전문 차량 다량 보유 &nbsp;·&nbsp; 24시간 견적 접수
+            &nbsp;·&nbsp; 5톤·16톤 전문 차량 다량 보유 &nbsp;·&nbsp; 24시간 견적 접수
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
@@ -279,15 +287,18 @@ export default function HomePage() {
             <h2 className="section-title">보유 장비 현황</h2>
             <p className="section-subtitle">상시 대기 중인 전문 차량으로 즉시 출동합니다</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {equipment.map((e) => (
               <div
                 key={e.name}
-                className="bg-white border border-brand-light rounded-xl p-5 text-center hover:shadow-md hover:border-brand-accent transition-all"
+                className="bg-white border border-brand-light rounded-xl p-6 text-center hover:shadow-md hover:border-brand-accent transition-all"
               >
-                <div className="text-4xl mb-3">{e.icon}</div>
-                <div className="font-bold text-brand-primary mb-1">{e.name}</div>
-                <div className="text-xs text-brand-gray">{e.spec}</div>
+                <div className="text-5xl mb-3">{e.icon}</div>
+                <div className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-3 py-1 rounded-full mb-2">
+                  {e.badge}
+                </div>
+                <div className="font-bold text-brand-primary text-lg mb-1">{e.name}</div>
+                <div className="text-xs text-brand-gray leading-relaxed">{e.spec}</div>
               </div>
             ))}
           </div>

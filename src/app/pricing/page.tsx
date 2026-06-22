@@ -7,17 +7,23 @@ export const metadata: Metadata = {
 };
 
 const dailyPrices = [
-  { type: "3.5톤 살수차", daily: "400,000원~", monthly: "협의", note: "반일 단가 별도 협의" },
-  { type: "5톤 급수차", daily: "450,000원~", monthly: "협의", note: "식수용 수질검사 포함" },
-  { type: "8톤 살수차", daily: "550,000원~", monthly: "협의", note: "고압 장비 기본 포함" },
-  { type: "16톤 살수차", daily: "700,000원~", monthly: "협의", note: "광역 현장 최적" },
+  {
+    type: "5톤 살수·급수차",
+    daily: "전화문의",
+    monthly: "전화문의",
+    note: "반일 작업 가능 · 수질검사 포함",
+  },
+  {
+    type: "16톤 살수차 (물대포)",
+    daily: "전화문의",
+    monthly: "전화문의",
+    note: "광역 대형 현장 · 반일 가능",
+  },
 ];
 
 const monthlyPrices = [
-  { type: "3.5톤 (소형)", range: "5,500,000원~/월", comment: "소규모 현장, 1일 1~2회 출동 기준" },
-  { type: "5톤 (중형)", range: "7,000,000원~/월", comment: "중형 현장, 정기 출동 계약" },
-  { type: "8톤 (대형)", range: "9,000,000원~/월", comment: "대형 토목·건설 현장" },
-  { type: "16톤 (특대)", range: "12,000,000원~/월", comment: "광역·대단위 현장" },
+  { type: "5톤 살수·급수차", range: "전화문의", comment: "정기 출동 계약 · 우선 배차 혜택" },
+  { type: "16톤 살수차 (물대포)", range: "전화문의", comment: "대형 토목·건설 현장 장기 계약" },
 ];
 
 const faq = [
@@ -54,12 +60,12 @@ export default function PricingPage() {
 
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-4 space-y-10">
-
           {/* Notice */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-4 text-sm text-yellow-800">
-            <strong>※ 안내사항</strong><br />
-            아래 단가는 <strong>협회 기준 참고가</strong>이며, 현장 위치·작업 범위·계약 기간에 따라 달라질 수 있습니다.
-            정확한 견적은 전화 또는 온라인 문의를 통해 안내해 드립니다.
+            <strong>※ 안내사항</strong>
+            <br />
+            아래 단가는 <strong>협회 기준 참고가</strong>이며, 현장 위치·작업 범위·계약 기간에 따라
+            달라질 수 있습니다. 정확한 견적은 전화 또는 온라인 문의를 통해 안내해 드립니다.
           </div>
 
           {/* Daily */}
@@ -128,7 +134,6 @@ export default function PricingPage() {
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
@@ -136,10 +141,16 @@ export default function PricingPage() {
       <section className="bg-brand-primary py-10">
         <div className="max-w-xl mx-auto px-4 text-center text-white">
           <p className="text-xl font-bold mb-2">정확한 견적이 필요하신가요?</p>
-          <p className="text-blue-200 text-sm mb-5">현장 정보를 알려주시면 맞춤 견적을 바로 안내해 드립니다.</p>
+          <p className="text-blue-200 text-sm mb-5">
+            현장 정보를 알려주시면 맞춤 견적을 바로 안내해 드립니다.
+          </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:01048945037" className="btn-cta bg-phone">📞 전화 견적</a>
-            <Link href="/contact" className="btn-cta bg-white text-brand-primary">📋 온라인 견적</Link>
+            <a href="tel:01048945037" className="btn-cta bg-phone">
+              📞 전화 견적
+            </a>
+            <Link href="/contact" className="btn-cta bg-white text-brand-primary">
+              📋 온라인 견적
+            </Link>
           </div>
         </div>
       </section>
