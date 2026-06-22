@@ -124,11 +124,14 @@ export default function HomePage() {
       </div>
 
       {/* ① Hero — 도입: 3초 안에 '무엇을', '내게 무슨 이득인지' */}
-      <section className="relative min-h-[88vh] flex items-center justify-center bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
-        </div>
+      <section className="relative min-h-[88vh] flex items-center justify-center overflow-hidden">
+        <img
+          src="/wcContents/hero-bg.jpeg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/55" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm border border-white/20">
