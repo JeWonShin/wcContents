@@ -25,10 +25,10 @@ const equipment = [
 ];
 
 const certs = [
-  { icon: "🔬", label: "KOTITI 수질검사 필증", desc: "공인 기관의 수질 안전 검사 통과" },
-  { icon: "®️", label: "상표등록증", desc: "브랜드 상표 정식 등록 완료" },
-  { icon: "📄", label: "사업자등록증", desc: "사업자등록번호: 209-31-66281" },
-  { icon: "🚛", label: "화물자동차 운송사업 허가", desc: "관련 법령에 따른 운송 허가 보유" },
+  { icon: "🔬", label: "KOTITI 수질검사 필증", desc: "공인기관 수질 안전검사 통과" },
+  { icon: "®️", label: "상표등록증", desc: "브랜드 상표 정식 등록" },
+  { icon: "📄", label: "사업자등록증", desc: "209-31-66281" },
+  { icon: "🚛", label: "화물자동차 운송사업 허가", desc: "관련 법령에 따른 운송 허가" },
 ];
 
 const references = [
@@ -118,7 +118,7 @@ export default function AboutPage() {
               <tbody>
                 {equipment.map((e) => (
                   <tr key={e.name}>
-                    <td>
+                    <td className="whitespace-nowrap">
                       <span className="mr-1">{e.icon}</span>
                       <strong>{e.name}</strong>
                     </td>
@@ -175,8 +175,10 @@ export default function AboutPage() {
             {certs.map((c) => (
               <div key={c.label} className="card text-center">
                 <div className="text-3xl mb-2">{c.icon}</div>
-                <div className="font-bold text-brand-primary text-sm mb-1">{c.label}</div>
-                <div className="text-xs text-gray-500">{c.desc}</div>
+                <div className="font-bold text-brand-primary text-sm mb-1 break-keep">
+                  {c.label}
+                </div>
+                <div className="text-xs text-gray-500 break-keep">{c.desc}</div>
               </div>
             ))}
           </div>
