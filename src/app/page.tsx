@@ -105,12 +105,22 @@ export default function HomePage() {
   return (
     <>
       {/* 상단 공지 바 */}
-      <div className="bg-red-600 text-white text-center text-xs sm:text-sm py-2.5 font-bold tracking-wide">
-        🚨 지금 즉시 출동 가능 &nbsp;·&nbsp;{" "}
-        <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
-          📞 {PHONE}
-        </a>{" "}
-        &nbsp;·&nbsp; 평택·포승·안중·화성·안성·오산·천안·아산
+      <div className="bg-red-600 text-white text-xs sm:text-sm py-2.5 font-bold tracking-wide">
+        {/* 모바일: 흐르는 티커 */}
+        <div className="sm:hidden overflow-hidden">
+          <span className="announcement-ticker inline-block whitespace-nowrap">
+            🚨 지금 즉시 출동 가능 &nbsp;·&nbsp; 📞 {PHONE} &nbsp;·&nbsp;
+            평택·포승·안중·화성·안성·오산·천안·아산 &nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+        {/* 데스크탑: 한 줄 중앙 */}
+        <div className="hidden sm:block text-center">
+          🚨 지금 즉시 출동 가능 &nbsp;·&nbsp;{" "}
+          <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
+            📞 {PHONE}
+          </a>{" "}
+          &nbsp;·&nbsp; 평택·포승·안중·화성·안성·오산·천안·아산
+        </div>
       </div>
 
       {/* ① Hero — 도입: 3초 안에 '무엇을', '내게 무슨 이득인지' */}

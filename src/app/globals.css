@@ -23,6 +23,19 @@ body {
   background: #ffffff;
 }
 
+/* Announcement bar ticker (mobile) */
+@keyframes ticker {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.announcement-ticker {
+  animation: ticker 18s linear infinite;
+}
+
 /* Phone ring pulse */
 @keyframes ring-pulse {
   0% {
