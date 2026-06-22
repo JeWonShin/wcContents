@@ -32,17 +32,17 @@ const certs = [
 ];
 
 const references = [
-  { label: "대보건설", detail: "서부내륙고속도로 13·14공구 살수 작업" },
-  { label: "평택시청", detail: "고덕산단 2차 용수공급시설공사 3공구" },
-  { label: "화성시", detail: "수질 오염수 수해 복구 작업" },
-  { label: "삼성 물류창고", detail: "현장 살수 작업" },
-  { label: "영화촬영장", detail: "긴급 용수 및 비오는 장면 연출" },
+  { label: "수도권 광역고속도로 건설현장", detail: "13·14공구 비산먼지 저감 살수 작업" },
+  { label: "경기 평택 관급 공사", detail: "용수공급시설공사 현장 급수 지원" },
+  { label: "경기 화성 관급 복구", detail: "수질 오염수 수해 복구 작업" },
+  { label: "수도권 대형 물류센터", detail: "현장 살수 작업" },
+  { label: "영화·드라마 촬영장", detail: "긴급 용수 및 우천 장면 연출" },
   { label: "행사장·야외 이벤트", detail: "긴급 용수 지원 다수" },
-  { label: "수압·보일러 테스트", detail: "긴급 용수 철야 작업" },
-  { label: "조경·관수", detail: "긴급 급수 지원 다수" },
-  { label: "에어바운스 설치", detail: "물 공급 지원" },
+  { label: "수압·보일러 테스트 현장", detail: "긴급 용수 철야 작업" },
+  { label: "조경·관수 현장", detail: "긴급 급수 지원 다수" },
+  { label: "에어바운스 설치 행사", detail: "물 공급 지원" },
   { label: "긴급 상하수도 복구현장", detail: "복구 작업 지원" },
-  { label: "기타", detail: "공사현장·생활용수·특수 용수 공급 다수" },
+  { label: "기타 다수", detail: "공사현장·생활용수·특수 용수 공급" },
 ];
 
 export default function AboutPage() {
