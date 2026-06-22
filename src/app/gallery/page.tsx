@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "OK살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
 };
 
-const categories = ["전체", "공사·현장", "조경·농업", "차량·대기"];
+const categories = ["전체", "공사·현장", "조경·농업", "차량·대기", "생활·행사"];
 
 type PhotoItem = {
   type: "photo";
@@ -16,14 +16,7 @@ type PhotoItem = {
   label: string;
 };
 
-type PlaceholderItem = {
-  type: "placeholder";
-  cat: string;
-  label: string;
-  bg: string;
-};
-
-const items: (PhotoItem | PlaceholderItem)[] = [
+const items: PhotoItem[] = [
   {
     type: "photo",
     src: "/gallery/construction-spray.jpeg",
@@ -53,28 +46,53 @@ const items: (PhotoItem | PlaceholderItem)[] = [
     label: "야간 긴급 출동 대기",
   },
   {
-    type: "placeholder",
+    type: "photo",
+    src: "/gallery/earthwork-site.jpeg",
+    alt: "광역 토목공사 현장 비산먼지 저감 살수",
     cat: "공사·현장",
-    label: "도로 확포장 공사 먼지 억제",
-    bg: "from-orange-700 to-amber-500",
+    label: "광역 토목공사 비산먼지 저감",
   },
   {
-    type: "placeholder",
-    cat: "조경·농업",
-    label: "공원 가로수 가뭄 급수 지원",
-    bg: "from-green-800 to-green-600",
-  },
-  {
-    type: "placeholder",
+    type: "photo",
+    src: "/gallery/night-crane.jpeg",
+    alt: "야간 긴급 공사현장 크레인 협업 작업",
     cat: "공사·현장",
-    label: "아파트 신축현장 비산먼지 저감",
-    bg: "from-orange-800 to-orange-600",
+    label: "야간 긴급 공사 — 크레인 협업",
   },
   {
-    type: "placeholder",
+    type: "photo",
+    src: "/gallery/street-watering.jpeg",
+    alt: "도로변 조경 급수 작업 — 가로수 관수",
     cat: "조경·농업",
-    label: "신규 식재 수목 활착 급수",
-    bg: "from-teal-700 to-teal-500",
+    label: "도로변 조경 급수 작업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/autumn-trees.jpeg",
+    alt: "가을 가로수 조경 급수 지원",
+    cat: "조경·농업",
+    label: "가을 가로수 관수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/sidewalk-watering.jpeg",
+    alt: "도로변 가로수 관수 지원",
+    cat: "조경·농업",
+    label: "가로수·식재 관수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/event-sunset.jpeg",
+    alt: "야외 행사장 긴급 용수 지원 — 석양",
+    cat: "생활·행사",
+    label: "야외 행사장 긴급 용수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/event-night.jpeg",
+    alt: "야외 행사장 야간 용수 지원",
+    cat: "생활·행사",
+    label: "야외 행사장 야간 용수 지원",
   },
 ];
 
@@ -111,45 +129,30 @@ export default function GalleryPage() {
       <section className="py-10">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {items.map((item, i) =>
-              item.type === "photo" ? (
-                <div
-                  key={i}
-                  className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer bg-gray-100"
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    unoptimized
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-200" />
-                  <div className="absolute inset-0 flex flex-col justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      {item.cat}
-                    </span>
-                    <p className="text-white text-xs font-bold leading-tight drop-shadow">
-                      {item.label}
-                    </p>
-                  </div>
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="relative aspect-square rounded-xl overflow-hidden group cursor-pointer bg-gray-100"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  unoptimized
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-200" />
+                <div className="absolute inset-0 flex flex-col justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                    {item.cat}
+                  </span>
+                  <p className="text-white text-xs font-bold leading-tight drop-shadow">
+                    {item.label}
+                  </p>
                 </div>
-              ) : (
-                <div
-                  key={i}
-                  className={`relative aspect-square rounded-xl bg-gradient-to-br ${item.bg} overflow-hidden group cursor-pointer`}
-                >
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-200" />
-                  <div className="absolute inset-0 flex flex-col justify-between p-3">
-                    <span className="self-start bg-white/20 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
-                      {item.cat}
-                    </span>
-                    <p className="text-white text-xs font-bold leading-tight">{item.label}</p>
-                  </div>
-                </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
 
           <div className="mt-8 text-center text-brand-gray text-sm">
