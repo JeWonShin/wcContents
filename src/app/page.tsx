@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OK살수 | 살수차·급수차 전문 – 수도권·경기 즉시 배차",
+  title: "OK살수 | 살수차·급수차 전문 – 평택·안중·화성·안성·천안·아산",
   description:
-    "공사현장 비산먼지 저감부터 조경·급수, 행사용수까지. 수도권·경기 30분 내 즉시 배차. 24시간 온라인 견적 접수.",
+    "물이 필요한 곳! 어디라도 달려갑니다. 도로살수·조경급수·식수운반·비산먼지·비상출동. 평택·안중·화성·안성·천안·아산 즉시 출동. 살수차 다량 보유. 24시간 견적 접수.",
 };
 
 const PHONE = "010-4894-5037";
@@ -21,19 +21,19 @@ const quickMenus = [
 
 const trustPoints = [
   {
-    icon: "📋",
-    title: "정직한 단가",
-    desc: "협회 기준 단가 공개. 숨겨진 비용 없이 투명하게 안내합니다.",
+    icon: "🚛",
+    title: "살수차 다량 보유",
+    desc: "3.5톤~16톤 고압 살수·급수차 상시 대기. 차량 부족 없이 즉시 배차합니다.",
   },
   {
     icon: "🔬",
-    title: "KOTITI 수질검사",
-    desc: "공인 기관 수질 검사 필증 보유. 안전한 물로 작업합니다.",
+    title: "KOTITI 수질검사 필증",
+    desc: "공인 기관 수질 검사 완료. 안전하고 위생적인 물로 작업합니다.",
   },
   {
-    icon: "🚛",
-    title: "최신 고압 장비",
-    desc: "3.5톤~16톤 고압 살수·급수차 상시 보유. 즉시 배차 가능.",
+    icon: "📋",
+    title: "투명한 단가",
+    desc: "협회 기준 단가 공개. 숨겨진 비용 없이 견적부터 명확하게 안내합니다.",
   },
 ];
 
@@ -44,19 +44,15 @@ const equipment = [
   { name: "16톤 살수차", spec: "탱크 16,000L · 광역 살수", icon: "🚜" },
 ];
 
-const galleryItems = [
-  { label: "공사현장 살수 작업", bg: "from-blue-800 to-blue-600" },
-  { label: "도로 먼지 저감", bg: "from-brand-primary to-brand-secondary" },
-  { label: "조경·농업 급수", bg: "from-green-800 to-green-600" },
-  { label: "행사장 급수 지원", bg: "from-sky-700 to-sky-500" },
-];
+const serviceArea = ["평택", "안중", "화성", "안성", "천안", "아산"];
+
+const tags = ["#도로살수", "#조경공사급수", "#식수운반", "#비산먼지", "#물채움", "#비상출동", "#살수차다량보유"];
 
 export default function HomePage() {
   return (
     <>
       {/* ① Hero Section */}
       <section className="relative min-h-[92vh] flex items-center justify-center bg-gradient-to-br from-brand-primary via-brand-secondary to-brand-accent overflow-hidden">
-        {/* Background pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-72 h-72 rounded-full bg-white blur-3xl" />
           <div className="absolute bottom-10 right-10 w-96 h-96 rounded-full bg-white blur-3xl" />
@@ -64,16 +60,28 @@ export default function HomePage() {
 
         <div className="relative z-10 text-center text-white px-4 max-w-2xl mx-auto">
           <div className="inline-block bg-white/20 text-white text-sm font-bold px-4 py-1.5 rounded-full mb-5 backdrop-blur-sm">
-            📍 평택 · 안중 · 수도권 전 지역 즉시 배차
+            📍 평택 · 안중 · 화성 · 안성 · 천안 · 아산 즉시 출동
           </div>
-          <h1 className="text-4xl md:text-5xl font-black leading-tight mb-4">
-            살수차 · 급수차<br />
-            <span className="text-yellow-300">30분 내</span> 즉시 출동
+          <h1 className="text-4xl md:text-5xl font-black leading-tight mb-3">
+            물이 필요한 곳!<br />
+            <span className="text-yellow-300">어디라도 달려갑니다</span>
           </h1>
-          <p className="text-blue-100 text-lg mb-8 leading-relaxed">
-            도로살수·조경급수·식수운반·비상출동까지
-            <br />살수차 다량 보유, 대표 직접 출동합니다.
+          <p className="text-white/80 text-base font-semibold mb-2 tracking-wide">
+            살수차 · 급수차 전문 OK살수 · 신속 · 정확 · 안전
           </p>
+          <p className="text-blue-100 text-sm mb-6 leading-relaxed">
+            작은 일이라도 믿고 맡겨주신 만큼<br className="sm:hidden" /> 완벽한 작업으로 보답해 드리겠습니다.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {tags.map((t) => (
+              <span
+                key={t}
+                className="text-xs bg-white/15 backdrop-blur-sm text-white/90 px-3 py-1 rounded-full border border-white/20"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE.replace(/-/g, "")}`}
@@ -90,7 +98,6 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/60 text-sm flex flex-col items-center animate-bounce">
           <span>스크롤</span>
           <span>↓</span>
@@ -163,30 +170,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑤ Gallery Preview */}
+      {/* ⑤ Service Area */}
       <section className="py-14 bg-brand-bg">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="section-title">현장 갤러리</h2>
-            <p className="section-subtitle">오늘도 현장에서 뛰고 있습니다</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {galleryItems.map((g) => (
-              <Link
-                key={g.label}
-                href="/gallery"
-                className={`relative aspect-square rounded-xl bg-gradient-to-br ${g.bg} flex items-end p-3 group overflow-hidden hover:shadow-lg transition-shadow`}
+        <div className="max-w-6xl mx-auto px-4 text-center">
+          <h2 className="section-title">서비스 지역</h2>
+          <p className="section-subtitle">아래 지역 전 구역에 즉시 출동합니다</p>
+          <div className="flex flex-wrap justify-center gap-3 mt-2">
+            {serviceArea.map((city) => (
+              <div
+                key={city}
+                className="bg-white border-2 border-brand-secondary text-brand-primary font-bold text-lg px-8 py-4 rounded-xl shadow-sm"
               >
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
-                <span className="relative z-10 text-white text-xs font-bold">{g.label}</span>
-              </Link>
+                {city}
+              </div>
             ))}
           </div>
-          <div className="text-center mt-6">
-            <Link href="/gallery" className="btn-cta-outline text-sm">
-              갤러리 전체 보기 →
-            </Link>
-          </div>
+          <p className="mt-6 text-sm text-brand-gray">
+            위 지역 외에도 문의 주시면 출동 가능 여부를 확인해 드립니다.
+          </p>
         </div>
       </section>
 
