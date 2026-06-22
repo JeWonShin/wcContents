@@ -100,16 +100,14 @@ export default function ServicesPage() {
       <section className="bg-brand-bg py-14 border-b border-brand-light">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h1 className="text-3xl md:text-4xl font-black text-brand-primary mb-3">서비스 안내</h1>
-          <p className="text-brand-gray">
-            현장과 목적에 맞는 살수·급수 서비스를 선택하세요.
-          </p>
+          <p className="text-brand-gray">현장과 목적에 맞는 살수·급수 서비스를 선택하세요.</p>
         </div>
       </section>
 
       {/* Services */}
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-4 space-y-10">
-          {services.map((s, i) => (
+          {services.map((s) => (
             <div key={s.id} id={s.id} className="card overflow-hidden">
               <div className={`bg-gradient-to-r ${s.bg} p-6 text-white flex items-center gap-4`}>
                 <span className="text-5xl">{s.icon}</span>
@@ -123,14 +121,20 @@ export default function ServicesPage() {
                 <ul className="space-y-2">
                   {s.items.map((item) => (
                     <li key={item} className="flex items-center gap-2 text-sm text-gray-600">
-                      <span className="w-5 h-5 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xs font-bold flex-shrink-0">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-brand-accent/20 text-brand-accent flex items-center justify-center text-xs font-bold flex-shrink-0">
+                        ✓
+                      </span>
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-6 flex gap-3">
-                  <a href="tel:01048945037" className="btn-cta text-sm">📞 전화 문의</a>
-                  <Link href="/contact" className="btn-cta-outline text-sm">📋 견적 요청</Link>
+                  <a href="tel:01048945037" className="btn-cta text-sm">
+                    📞 전화 문의
+                  </a>
+                  <Link href="/contact" className="btn-cta-outline text-sm">
+                    📋 견적 요청
+                  </Link>
                 </div>
               </div>
             </div>
@@ -142,10 +146,16 @@ export default function ServicesPage() {
       <section className="bg-brand-primary py-10">
         <div className="max-w-xl mx-auto px-4 text-center text-white">
           <p className="text-xl font-bold mb-2">어떤 현장이든 상담해 드립니다</p>
-          <p className="text-blue-200 text-sm mb-5">목록에 없는 작업도 문의해 주시면 최적의 방법을 안내해 드립니다.</p>
+          <p className="text-blue-200 text-sm mb-5">
+            목록에 없는 작업도 문의해 주시면 최적의 방법을 안내해 드립니다.
+          </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:01048945037" className="btn-cta bg-phone">📞 010-4894-5037</a>
-            <Link href="/pricing" className="btn-cta bg-white text-brand-primary">💰 단가표 보기</Link>
+            <a href="tel:01048945037" className="btn-cta bg-phone">
+              📞 010-4894-5037
+            </a>
+            <Link href="/pricing" className="btn-cta bg-white text-brand-primary">
+              💰 단가표 보기
+            </Link>
           </div>
         </div>
       </section>
