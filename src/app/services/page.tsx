@@ -19,7 +19,7 @@ const services = [
       "철거·재개발 현장 비산먼지 저감",
       "대지 정지 작업 후 먼지 억제",
     ],
-    bg: "from-orange-700 to-orange-500",
+    bg: "from-brand-primary to-brand-secondary",
   },
   {
     id: "landscape",
@@ -33,7 +33,7 @@ const services = [
       "골프장 · 체육시설 잔디 급수",
       "신규 식재 수목 활착 급수",
     ],
-    bg: "from-green-700 to-green-500",
+    bg: "from-brand-accent to-brand-nature",
   },
   {
     id: "living",
@@ -47,7 +47,7 @@ const services = [
       "영화·드라마 촬영 현장 용수",
       "수영장·연못 물 채우기",
     ],
-    bg: "from-blue-700 to-blue-500",
+    bg: "from-brand-secondary to-brand-accent",
   },
   {
     id: "special",
@@ -61,7 +61,7 @@ const services = [
       "방역 약품 살포 지원",
       "하절기 도로 쿨링 살수",
     ],
-    bg: "from-purple-700 to-purple-500",
+    bg: "from-slate-700 to-slate-500",
   },
   {
     id: "excavator",
@@ -75,7 +75,7 @@ const services = [
       "대지 정지 및 성토 작업",
       "철거 후 잔재물 처리",
     ],
-    bg: "from-yellow-700 to-yellow-500",
+    bg: "from-amber-700 to-amber-500",
   },
   {
     id: "landscaping",
@@ -89,7 +89,7 @@ const services = [
       "정원·옥상 녹화 조성",
       "잔디 식재 및 유지관리",
     ],
-    bg: "from-emerald-700 to-emerald-500",
+    bg: "from-brand-nature to-teal-600",
   },
 ];
 

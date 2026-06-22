@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
 
 :root {
-  --brand-primary: #10416E;
-  --brand-secondary: #1F6FB2;
-  --brand-accent: #2E86C1;
-  --brand-light: #BBD7EC;
-  --brand-bg: #F4F9FD;
+  --brand-primary: #0f4c75;
+  --brand-secondary: #1464a0;
+  --brand-accent: #0d9488;
+  --brand-light: #a7d3cf;
+  --brand-bg: #f0f8f7;
+  --brand-nature: #4aab7e;
 }
 
 html {
@@ -17,8 +18,8 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
-  color: #1A1A1A;
+  font-family: "Noto Sans KR", "Malgun Gothic", "맑은 고딕", "Apple SD Gothic Neo", sans-serif;
+  color: #1a1a1a;
   background: #ffffff;
 }
 
