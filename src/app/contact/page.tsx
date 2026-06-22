@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import QuoteForm from "@/components/QuoteForm";
 
 export const metadata: Metadata = {
   title: "고객센터 · 견적 문의 | OK살수",
@@ -112,15 +111,36 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Quote Form */}
+            {/* KakaoTalk CTA */}
             <div>
-              <h2 className="section-title border-l-4 border-brand-accent pl-3">
-                온라인 견적 문의
-              </h2>
-              <p className="text-brand-gray text-sm mb-4">
-                아래 양식을 작성하시면 담당자가 빠르게 연락드립니다.
+              <h2 className="section-title border-l-4 border-brand-accent pl-3">카카오톡 상담</h2>
+              <p className="text-brand-gray text-sm mb-6">
+                카카오톡 채널로 문의주시면 빠르게 답변 드립니다.
               </p>
-              <QuoteForm />
+              <a
+                href="https://open.kakao.com/o/sK8HVKAi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center gap-4 bg-kakao rounded-2xl p-10 hover:brightness-95 transition-all shadow-md"
+              >
+                <span className="text-6xl">💬</span>
+                <div className="text-center">
+                  <div className="font-black text-gray-900 text-2xl mb-1">카카오톡 채널 상담</div>
+                  <div className="text-gray-700 text-sm">채널명: OK살수 · 24시간 접수</div>
+                </div>
+                <div className="bg-gray-900 text-white font-bold px-8 py-3 rounded-xl text-sm">
+                  카카오톡으로 문의하기
+                </div>
+              </a>
+              <div className="mt-4 text-center">
+                <p className="text-brand-gray text-xs">
+                  카카오톡이 불편하신 경우&nbsp;
+                  <a href="tel:01048945037" className="underline text-brand-secondary font-bold">
+                    010-4894-5037
+                  </a>
+                  으로 전화 주세요.
+                </p>
+              </div>
             </div>
           </div>
         </div>
