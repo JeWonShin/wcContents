@@ -133,8 +133,8 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black/40" />
 
-        {/* 텍스트 오버레이 */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center z-10 text-center text-white px-4">
+        {/* 텍스트 오버레이 — 상단 정렬로 하단 OK살수차 로고 노출 */}
+        <div className="absolute inset-0 flex flex-col items-center justify-start pt-[10%] z-10 text-center text-white px-4">
           <div className="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 backdrop-blur-sm border border-white/20">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             지금 출동 가능
