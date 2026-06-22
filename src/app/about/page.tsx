@@ -195,7 +195,7 @@ export default function AboutPage() {
               href="https://open.kakao.com/o/sK8HVKAi"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-cta bg-white text-brand-primary"
+              className="btn-cta bg-kakao text-gray-900"
             >
               💬 카카오톡 문의
             </a>

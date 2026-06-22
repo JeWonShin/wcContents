@@ -339,7 +339,7 @@ export default function HomePage() {
               href="https://open.kakao.com/o/sK8HVKAi"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-cta text-sm"
+              className="btn-cta bg-kakao text-gray-900 text-sm"
             >
               💬 카카오톡 문의
             </a>
@@ -388,7 +388,7 @@ export default function HomePage() {
               href="https://open.kakao.com/o/sK8HVKAi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-white text-brand-primary font-bold px-8 py-4 rounded-xl transition hover:bg-brand-bg active:scale-95"
+              className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-bold px-8 py-4 rounded-xl transition hover:brightness-95 active:scale-95"
             >
               💬 카카오톡 문의
             </a>
