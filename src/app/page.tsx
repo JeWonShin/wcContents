@@ -74,7 +74,7 @@ const equipment = [
   {
     name: "16톤 살수차",
     spec: "탱크 16,000L · 물대포 · 광역 대형 살수",
-    icon: "🚜",
+    icon: "🚛",
     badge: "다량 보유",
   },
 ];

@@ -19,7 +19,7 @@ const equipment = [
     tank: "16,000L",
     spec: "물대포 · 대용량 광역 살수",
     use: "대형 공사현장, 광역 비산먼지, 대단위 토목",
-    icon: "🚜",
+    icon: "🚛",
     badge: "다량 보유",
   },
 ];
