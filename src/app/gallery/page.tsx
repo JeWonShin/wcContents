@@ -1,12 +1,9 @@
-import type { Metadata } from "next";
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
 
 const BASE_PATH = "/wcContents";
-
-export const metadata: Metadata = {
-  title: "현장 갤러리 | OK살수",
-  description: "OK살수의 실제 작업 현장 사진 갤러리. 공사현장 살수, 조경 급수, 행사 지원 현장.",
-};
 
 type PhotoItem = {
   type: "photo";
@@ -252,6 +249,8 @@ const items: PhotoItem[] = [
   },
 ];
 
+const categories = ["전체", "공사·현장", "차량·대기", "조경·농업", "생활·행사"];
+
 const rotateClass: Record<string, string> = {
   "90": "rotate-90",
   "-90": "-rotate-90",
@@ -259,6 +258,9 @@ const rotateClass: Record<string, string> = {
 };
 
 export default function GalleryPage() {
+  const [active, setActive] = useState("전체");
+  const filtered = active === "전체" ? items : items.filter((item) => item.cat === active);
+
   return (
     <>
       {/* Hero */}
@@ -269,13 +271,37 @@ export default function GalleryPage() {
         </div>
       </section>
 
+      {/* Category Tabs */}
+      <section className="py-5 border-b border-brand-light bg-white sticky top-16 z-30">
+        <div className="max-w-5xl mx-auto px-4 flex gap-2 overflow-x-auto pb-1">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`flex-shrink-0 px-4 py-2 rounded-full text-sm font-bold transition-all ${
+                active === cat
+                  ? "bg-brand-primary text-white shadow-sm"
+                  : "bg-brand-bg text-brand-gray hover:bg-brand-light"
+              }`}
+            >
+              {cat}
+              <span
+                className={`ml-1.5 text-xs ${active === cat ? "text-blue-200" : "text-gray-400"}`}
+              >
+                {cat === "전체" ? items.length : items.filter((i) => i.cat === cat).length}
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
+
       {/* Gallery Grid */}
       <section className="py-10">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            {items.map((item, i) => (
+            {filtered.map((item, i) => (
               <div
-                key={i}
+                key={item.src}
                 className="relative aspect-square rounded-xl overflow-hidden bg-gray-100"
               >
                 <Image
