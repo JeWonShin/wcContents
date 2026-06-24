@@ -56,7 +56,6 @@ const items: PhotoItem[] = [
     alt: "철거현장 살수 — 포크레인 협업",
     cat: "공사·현장",
     label: "철거현장 살수 — 포크레인 협업",
-    rotate: "90",
   },
   {
     type: "photo",
@@ -85,7 +84,6 @@ const items: PhotoItem[] = [
     alt: "굴착 내부 급수 작업",
     cat: "공사·현장",
     label: "굴착 내부 급수 작업",
-    rotate: "90",
   },
   {
     type: "photo",
@@ -93,7 +91,6 @@ const items: PhotoItem[] = [
     alt: "굴착 현장 포크레인 급수 지원",
     cat: "공사·현장",
     label: "굴착 현장 급수 지원",
-    rotate: "90",
   },
   {
     type: "photo",
@@ -122,7 +119,6 @@ const items: PhotoItem[] = [
     alt: "공장 사일로 산업시설 급수 지원",
     cat: "공사·현장",
     label: "산업시설 급수 지원",
-    rotate: "90",
   },
   {
     type: "photo",
@@ -130,7 +126,6 @@ const items: PhotoItem[] = [
     alt: "공사현장 급수 작업",
     cat: "공사·현장",
     label: "공사현장 급수 작업",
-    rotate: "180",
   },
   {
     type: "photo",
@@ -152,7 +147,6 @@ const items: PhotoItem[] = [
     alt: "야간 도로 살수 작업",
     cat: "공사·현장",
     label: "야간 도로 살수 작업",
-    rotate: "90",
   },
   {
     type: "photo",
@@ -188,7 +182,6 @@ const items: PhotoItem[] = [
     alt: "OK살수 차량 현장 작업",
     cat: "차량·대기",
     label: "OK살수 차량 현장 출동",
-    rotate: "180",
   },
   {
     type: "photo",
@@ -231,7 +224,6 @@ const items: PhotoItem[] = [
     alt: "IBC 탱크 용수 공급 작업",
     cat: "생활·행사",
     label: "IBC 탱크 용수 공급",
-    rotate: "90",
   },
   {
     type: "photo",
