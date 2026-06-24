@@ -14,6 +14,7 @@ type PhotoItem = {
   alt: string;
   cat: string;
   label: string;
+  rotate?: "90" | "-90" | "180";
 };
 
 const items: PhotoItem[] = [
@@ -26,24 +27,113 @@ const items: PhotoItem[] = [
   },
   {
     type: "photo",
-    src: "/gallery/truck-dawn.jpeg",
-    alt: "새벽 OK살수 차량 3대 출동 대기",
-    cat: "차량·대기",
-    label: "새벽 출동 대기 — 다량 보유 차량",
+    src: "/gallery/road-truck-spray.jpeg",
+    alt: "도로 살수차 주행 중 살수 작업",
+    cat: "공사·현장",
+    label: "도로 살수차 주행 살수",
   },
   {
     type: "photo",
-    src: "/gallery/landscape-trees.jpeg",
-    alt: "조경 급수 작업 현장 — 수목 급수",
-    cat: "조경·농업",
-    label: "조경 수목 급수 지원",
+    src: "/gallery/road-hose-spray.jpeg",
+    alt: "도로에서 호스로 직접 살수 작업",
+    cat: "공사·현장",
+    label: "도로 고압 호스 살수 작업",
   },
   {
     type: "photo",
-    src: "/gallery/truck-night.jpeg",
-    alt: "야간 긴급 출동 대기 — OK살수 차량",
-    cat: "차량·대기",
-    label: "야간 긴급 출동 대기",
+    src: "/gallery/night-excavation.png",
+    alt: "야간 굴착 공사 포크레인 작업",
+    cat: "공사·현장",
+    label: "야간 굴착 — 포크레인 작업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/night-excavators.jpeg",
+    alt: "야간 도로 공사 포크레인 2대 작업",
+    cat: "공사·현장",
+    label: "야간 도로 공사 — 포크레인 협업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/demolition-spray.jpeg",
+    alt: "철거현장 살수 — 포크레인 협업",
+    cat: "공사·현장",
+    label: "철거현장 살수 — 포크레인 협업",
+    rotate: "90",
+  },
+  {
+    type: "photo",
+    src: "/gallery/pipeline-construction.jpeg",
+    alt: "상하수도 관로 공사 현장 지원",
+    cat: "공사·현장",
+    label: "상하수도 관로 공사 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/trench-pipeline.jpeg",
+    alt: "관로 굴착 공사 현장 급수",
+    cat: "공사·현장",
+    label: "관로 굴착 현장 급수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/trench-setup.jpeg",
+    alt: "굴착 현장 초기 설치 작업",
+    cat: "공사·현장",
+    label: "굴착 현장 초기 설치",
+  },
+  {
+    type: "photo",
+    src: "/gallery/trench-supply.jpeg",
+    alt: "굴착 내부 급수 작업",
+    cat: "공사·현장",
+    label: "굴착 내부 급수 작업",
+    rotate: "90",
+  },
+  {
+    type: "photo",
+    src: "/gallery/excavation-supply.jpeg",
+    alt: "굴착 현장 포크레인 급수 지원",
+    cat: "공사·현장",
+    label: "굴착 현장 급수 지원",
+    rotate: "90",
+  },
+  {
+    type: "photo",
+    src: "/gallery/road-widening.jpeg",
+    alt: "도로 확포장 공사 현장",
+    cat: "공사·현장",
+    label: "도로 확포장 공사 현장",
+  },
+  {
+    type: "photo",
+    src: "/gallery/road-construction.jpeg",
+    alt: "도로 공사 현장",
+    cat: "공사·현장",
+    label: "도로 공사 현장 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/site-installation.jpeg",
+    alt: "공사현장 설비 설치 작업",
+    cat: "공사·현장",
+    label: "현장 설비 설치 작업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/factory-silo-supply.jpeg",
+    alt: "공장 사일로 산업시설 급수 지원",
+    cat: "공사·현장",
+    label: "산업시설 급수 지원",
+    rotate: "90",
+  },
+  {
+    type: "photo",
+    src: "/gallery/site-water-work.jpeg",
+    alt: "공사현장 급수 작업",
+    cat: "공사·현장",
+    label: "공사현장 급수 작업",
+    rotate: "180",
   },
   {
     type: "photo",
@@ -58,6 +148,57 @@ const items: PhotoItem[] = [
     alt: "야간 긴급 공사현장 크레인 협업 작업",
     cat: "공사·현장",
     label: "야간 긴급 공사 — 크레인 협업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/night-spray.jpeg",
+    alt: "야간 도로 살수 작업",
+    cat: "공사·현장",
+    label: "야간 도로 살수 작업",
+    rotate: "90",
+  },
+  {
+    type: "photo",
+    src: "/gallery/truck-dawn.jpeg",
+    alt: "새벽 OK살수 차량 3대 출동 대기",
+    cat: "차량·대기",
+    label: "새벽 출동 대기 — 다량 보유 차량",
+  },
+  {
+    type: "photo",
+    src: "/gallery/truck-night.jpeg",
+    alt: "야간 긴급 출동 대기 — OK살수 차량",
+    cat: "차량·대기",
+    label: "야간 긴급 출동 대기",
+  },
+  {
+    type: "photo",
+    src: "/gallery/night-truck-city.jpeg",
+    alt: "평택역 앞 야간 살수차 작업",
+    cat: "차량·대기",
+    label: "평택역 앞 야간 살수 작업",
+  },
+  {
+    type: "photo",
+    src: "/gallery/business-card-collage.jpeg",
+    alt: "OK살수 명함 및 차량 현장 콜라주",
+    cat: "차량·대기",
+    label: "OK살수 — 도로공사살수·조경급수·식수운반",
+  },
+  {
+    type: "photo",
+    src: "/gallery/truck-site-work.jpeg",
+    alt: "OK살수 차량 현장 작업",
+    cat: "차량·대기",
+    label: "OK살수 차량 현장 출동",
+    rotate: "180",
+  },
+  {
+    type: "photo",
+    src: "/gallery/landscape-trees.jpeg",
+    alt: "조경 급수 작업 현장 — 수목 급수",
+    cat: "조경·농업",
+    label: "조경 수목 급수 지원",
   },
   {
     type: "photo",
@@ -82,6 +223,21 @@ const items: PhotoItem[] = [
   },
   {
     type: "photo",
+    src: "/gallery/building-pipe-supply.jpeg",
+    alt: "건물 내부 배관 급수 연결 작업",
+    cat: "생활·행사",
+    label: "건물 내부 배관 급수 연결",
+  },
+  {
+    type: "photo",
+    src: "/gallery/ibc-tank-supply.jpeg",
+    alt: "IBC 탱크 용수 공급 작업",
+    cat: "생활·행사",
+    label: "IBC 탱크 용수 공급",
+    rotate: "90",
+  },
+  {
+    type: "photo",
     src: "/gallery/event-sunset.jpeg",
     alt: "야외 행사장 긴급 용수 지원 — 석양",
     cat: "생활·행사",
@@ -95,6 +251,12 @@ const items: PhotoItem[] = [
     label: "야외 행사장 야간 용수 지원",
   },
 ];
+
+const rotateClass: Record<string, string> = {
+  "90": "rotate-90",
+  "-90": "-rotate-90",
+  "180": "rotate-180",
+};
 
 export default function GalleryPage() {
   return (
@@ -120,7 +282,7 @@ export default function GalleryPage() {
                   src={`${BASE_PATH}${item.src}`}
                   alt={item.alt}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${item.rotate ? rotateClass[item.rotate] : ""}`}
                   unoptimized
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
