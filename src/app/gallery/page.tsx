@@ -41,7 +41,7 @@ const items: PhotoItem[] = [
   },
   {
     type: "photo",
-    src: "/gallery/night-excavation.png",
+    src: "/gallery/night-excavation.jpeg",
     alt: "야간 굴착 공사 포크레인 작업",
     cat: "공사·현장",
     label: "야간 굴착 — 포크레인 작업",
@@ -284,6 +284,7 @@ export default function GalleryPage() {
                   fill
                   className={`object-cover ${item.rotate ? rotateClass[item.rotate] : ""}`}
                   unoptimized
+                  priority={i < 4}
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-black/30" />
