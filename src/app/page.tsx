@@ -123,26 +123,13 @@ export default function HomePage() {
       </div>
 
       {/* ① Hero */}
-      <section className="relative overflow-hidden">
+      <section>
         <img
           src="/wcContents/hero-bg.jpeg"
           alt="현장이 부르면, OK살수차가 달려갑니다 — OK살수"
           className="w-full h-auto block"
         />
         <h1 className="sr-only">OK살수 | 살수차·급수차 전문 — 평택·안중·화성·안성·천안·아산</h1>
-        <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
-          <svg
-            viewBox="0 0 1440 52"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            className="w-full h-10 sm:h-14"
-          >
-            <path
-              d="M0,26 C240,52 480,0 720,26 C960,52 1200,0 1440,26 L1440,52 L0,52 Z"
-              fill="white"
-            />
-          </svg>
-        </div>
       </section>
 
       {/* ② Stats Bar */}
