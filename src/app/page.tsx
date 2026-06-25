@@ -166,7 +166,7 @@ export default function HomePage() {
         <img
           src="/wcContents/hero-bg.jpeg"
           alt="현장이 부르면, OK살수차가 달려갑니다 — OK살수"
-          className="w-full h-auto block"
+          className="w-full h-[300px] sm:h-auto object-cover object-top block"
         />
         <h1 className="sr-only">OK살수 | 살수차·급수차 전문 — 평택·화성·안성·오산·천안·아산</h1>
       </section>
@@ -176,12 +176,14 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-4">
           <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
             {stats.map((s) => (
-              <div key={s.label} className="px-4">
-                <div className="text-4xl sm:text-5xl font-black text-yellow-300 leading-none">
+              <div key={s.label} className="px-2">
+                <div className="text-4xl sm:text-5xl font-black text-yellow-300 leading-none whitespace-nowrap">
                   {s.value}
-                  <span className="text-xl font-bold">{s.unit}</span>
+                  <span className="text-lg font-bold">{s.unit}</span>
                 </div>
-                <div className="text-sm font-bold text-white/90 mt-2">{s.label}</div>
+                <div className="text-xs font-bold text-white/90 mt-2 whitespace-nowrap">
+                  {s.label}
+                </div>
               </div>
             ))}
           </div>
