@@ -105,6 +105,20 @@ const services = [
     ],
     bg: "from-cyan-500 to-blue-500",
   },
+  {
+    id: "dump",
+    icon: "🚚",
+    title: "덤프·운반",
+    subtitle: "골재·토사운반 · 잔토처리 · 폐기물 운반",
+    desc: "건설현장에서 발생하는 토사·골재·잔토·폐기물 운반을 신속하게 처리합니다. 현장 자재 운반부터 폐기물 처리까지 원스톱으로 해결합니다.",
+    items: [
+      "골재운반 · 토사운반 · 잔토처리",
+      "현장자재 운반 및 폐기물 운반",
+      "철거 후 잔재물 처리",
+      "신속하고 안전한 운반 서비스",
+    ],
+    bg: "from-slate-700 to-slate-500",
+  },
 ];
 
 export default function ServicesPage() {
@@ -122,7 +136,7 @@ export default function ServicesPage() {
       <section className="py-14">
         <div className="max-w-5xl mx-auto px-4 space-y-10">
           {services.map((s) => (
-            <div key={s.id} id={s.id} className="card overflow-hidden">
+            <div key={s.id} id={s.id} className="card overflow-hidden scroll-mt-20">
               <div className={`bg-gradient-to-r ${s.bg} p-6 text-white flex items-center gap-4`}>
                 <span className="text-5xl">{s.icon}</span>
                 <div>

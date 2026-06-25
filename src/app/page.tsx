@@ -55,7 +55,7 @@ const serviceCardsHome = [
       "현장자재 운반 / 폐기물 운반",
       "신속하고 안전한 운반 서비스",
     ],
-    href: "/services",
+    href: "/services#dump",
     photo: `${BASE}/gallery/truck-site-work.jpeg`,
     gradient: "from-slate-900/50 to-slate-950/92",
   },
@@ -67,7 +67,7 @@ const workCategories = [
   { icon: "🏢", label: "건설작업", sub: "토목·기반공사", href: "/services#construction" },
   { icon: "⛏️", label: "토목작업", sub: "관로·구조물", href: "/services#excavator" },
   { icon: "💧", label: "용수공급", sub: "살수·급수작업", href: "/services#living" },
-  { icon: "🚛", label: "폐기물·운반", sub: "토사·폐기물 운반", href: "/services" },
+  { icon: "🚛", label: "폐기물·운반", sub: "토사·폐기물 운반", href: "/services#dump" },
 ];
 
 const painPoints = [
