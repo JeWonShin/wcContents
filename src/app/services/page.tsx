@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "서비스 안내 | OK살수",
-  description: "공사·건설현장 살수, 조경·농업 급수, 생활·행사 용수, 특수살수 서비스 안내.",
+  title: "서비스 안내 | OK살수 – 살수차·물놀이장급수·워터슬라이드급수·포크레인",
+  description:
+    "공사·건설현장 살수, 조경·농업 급수, 생활·행사 용수, 특수살수, 물놀이장 급수, 워터슬라이드 급수, 포크레인 관로작업, 덤프 운반 서비스 안내. 여름 행사장·학교·체육대회·축제 대용량 급수 즉시 출동. 평택·화성·안성·오산·천안·아산.",
 };
 
 const services = [
