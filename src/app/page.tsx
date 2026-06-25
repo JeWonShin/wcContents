@@ -164,32 +164,35 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ① Hero — 트럭+포크레인 배경 + HTML 텍스트 */}
+      {/* ① Hero — 다량 차량 보유 + 신뢰 뱃지 */}
       <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src={`${BASE}/gallery/construction-spray.jpeg`}
-          alt="OK살수 포크레인 고압 살수 현장 작업"
+          src={`${BASE}/gallery/truck-dawn.jpeg`}
+          alt="OK살수 살수차 다량 보유 — 즉시 출동 대기"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/85" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/88" />
         <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
           <div className="max-w-2xl mx-auto w-full text-white">
-            <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-4 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-3 drop-shadow-lg">
               현장이 부르면,
               <br />
               <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
             </h1>
-            <p className="text-base sm:text-lg text-white/85 font-bold mb-6 drop-shadow">
+            <p className="text-base sm:text-lg text-white/85 font-bold mb-7 drop-shadow">
               조경·건설 포크레인 / 살수차 전문 운영
             </p>
-            <ul className="space-y-2">
+            <div className="flex flex-wrap gap-2">
               {heroTrustItems.map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm text-white/90">
-                  <span className="text-yellow-300 font-black text-base flex-shrink-0">✓</span>
+                <span
+                  key={item}
+                  className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-3 py-2 rounded-full"
+                >
+                  <span className="text-yellow-300">✓</span>
                   {item}
-                </li>
+                </span>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </section>
