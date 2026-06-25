@@ -193,13 +193,13 @@ export default function HomePage() {
       <div className="bg-brand-primary text-white">
         <div className="max-w-3xl mx-auto">
           <div className="grid grid-cols-2 divide-x divide-white/20">
-            <div className="py-6 px-6 text-center">
+            <div className="py-6 px-6 flex flex-col items-center justify-center text-center">
               <div className="text-4xl font-black text-yellow-300 leading-none mb-1 whitespace-nowrap">
                 24시간
               </div>
               <div className="text-sm font-bold text-white/90">긴급출동 가능!</div>
             </div>
-            <div className="py-6 px-6 text-center">
+            <div className="py-6 px-6 flex flex-col items-center justify-center text-center">
               <div className="text-xs font-bold text-yellow-300 mb-1.5 tracking-wider">
                 활동지역
               </div>
