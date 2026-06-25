@@ -11,13 +11,6 @@ const PHONE = "010-4894-5037";
 const KAKAO = "https://open.kakao.com/o/sK8HVKAi";
 const BASE = "/wcContents";
 
-const heroTrustItems = [
-  "건설현장 전문 살수차",
-  "세금계산서 발행 가능",
-  "장비보험 가입 / 안전관리 철저",
-  "대형 현장 다수 작업",
-];
-
 const serviceCardsHome = [
   {
     icon: "🚒",
@@ -171,30 +164,14 @@ export default function HomePage() {
           alt="OK살수차 — 어디든 달려갑니다"
           className="w-full block"
         />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex flex-col justify-center px-6 py-8">
-          <div className="max-w-2xl mx-auto w-full">
-            <div className="bg-black/55 backdrop-blur-sm rounded-2xl px-6 py-8 text-white">
-              <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-3">
-                현장이 부르면,
-                <br />
-                <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
-              </h1>
-              <p className="text-base sm:text-lg text-white/85 font-bold mb-7">
-                조경·건설 포크레인 / 살수차 전문 운영
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {heroTrustItems.map((item) => (
-                  <span
-                    key={item}
-                    className="inline-flex items-center gap-1.5 bg-white/15 border border-white/30 text-white text-xs font-bold px-3 py-2 rounded-full"
-                  >
-                    <span className="text-yellow-300">✓</span>
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6">
+          <div className="max-w-2xl mx-auto w-full text-white">
+            <h1 className="text-3xl sm:text-5xl font-black leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              현장이 부르면,
+              <br />
+              <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
+            </h1>
           </div>
         </div>
       </section>
