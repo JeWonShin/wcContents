@@ -162,13 +162,44 @@ export default function HomePage() {
       </div>
 
       {/* ① Hero */}
-      <section>
+      <section className="relative overflow-hidden min-h-[440px] sm:min-h-[560px]">
         <img
           src="/wcContents/hero-bg.jpeg"
-          alt="현장이 부르면, OK살수차가 달려갑니다 — OK살수"
-          className="w-full h-[300px] sm:h-auto object-cover object-top block"
+          alt="OK살수 작업 현장 — 살수차·포크레인·조경건설 전문"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <h1 className="sr-only">OK살수 | 살수차·급수차 전문 — 평택·화성·안성·오산·천안·아산</h1>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/45 to-black/85" />
+        <div className="relative z-10 min-h-[440px] sm:min-h-[560px] flex flex-col justify-end pb-10 px-6">
+          <div className="max-w-2xl mx-auto w-full text-center text-white">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">
+              📍 평택·화성·안성·오산·천안·아산 즉시 출동
+            </div>
+            <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-3 drop-shadow-lg">
+              현장이 부르면,
+              <br />
+              <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
+            </h1>
+            <p className="text-base sm:text-lg text-white/90 font-semibold mb-8 drop-shadow">
+              살수차 · 포크레인 · 덤프 · 조경건설 — 한 번에 해결
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href={`tel:${PHONE.replace(/-/g, "")}`}
+                className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:bg-green-600 active:scale-95 transition-all"
+              >
+                📞 {PHONE}
+              </a>
+              <a
+                href="https://open.kakao.com/o/sK8HVKAi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:brightness-95 active:scale-95 transition-all"
+              >
+                💬 카카오톡 문의
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* ② Stats Bar */}
