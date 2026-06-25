@@ -167,11 +167,11 @@ export default function HomePage() {
       {/* ① Hero — 트럭+포크레인 배경 + HTML 텍스트 */}
       <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src={`${BASE}/hero-bg.jpeg`}
-          alt="OK살수 살수차·포크레인 현장 작업"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          src={`${BASE}/gallery/construction-spray.jpeg`}
+          alt="OK살수 포크레인 고압 살수 현장 작업"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/72 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/85" />
         <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
           <div className="max-w-2xl mx-auto w-full text-white">
             <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-4 drop-shadow-lg">
