@@ -168,13 +168,17 @@ export default function HomePage() {
         {/* 여름 물놀이 링크 뱃지 */}
         <Link
           href="/services#waterplay"
-          className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-cyan-500/80 backdrop-blur-sm text-white text-xs font-black px-3 py-2 rounded-full shadow-lg hover:bg-cyan-400/90 transition-colors"
+          className="absolute top-3 left-3 z-20 hover:scale-105 active:scale-95 transition-transform"
         >
-          <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80" />
-            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
-          </span>
-          🌊 여름 물놀이장 급수
+          <div className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-black px-4 py-2.5 rounded-full shadow-[0_0_16px_4px_rgba(34,211,238,0.55)] border border-white/30">
+            <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
+            </span>
+            <span className="animate-bounce inline-block">🌊</span>
+            <span className="tracking-tight">여름 물놀이장 급수</span>
+            <span className="opacity-75 text-[11px]">→</span>
+          </div>
         </Link>
         <div className="absolute inset-0 flex flex-col justify-center px-6">
           <div className="max-w-2xl mx-auto w-full text-white">
