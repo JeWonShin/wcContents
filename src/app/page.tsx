@@ -24,7 +24,7 @@ const serviceCardsHome = [
     title: "살수차",
     items: ["도로청소 / 비산먼지 저감", "용수공급", "긴급살수", "현장 살수작업"],
     href: "/services#construction",
-    photo: `${BASE}/gallery/road-truck-spray.jpeg`,
+    photo: `${BASE}/gallery/construction-spray.jpeg`,
     gradient: "from-blue-950/50 to-blue-950/92",
   },
   {
@@ -167,8 +167,8 @@ export default function HomePage() {
       {/* ① Hero — 다량 차량 보유 + 신뢰 뱃지 */}
       <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src={`${BASE}/gallery/truck-dawn.jpeg`}
-          alt="OK살수 살수차 다량 보유 — 즉시 출동 대기"
+          src={`${BASE}/gallery/road-truck-spray.jpeg`}
+          alt="OK살수 살수차 도로 주행 살수 — 즉시 출동"
           className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/55 to-black/88" />
