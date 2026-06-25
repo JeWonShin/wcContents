@@ -167,9 +167,9 @@ export default function HomePage() {
       {/* ① Hero — 다량 차량 보유 + 신뢰 뱃지 */}
       <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src={`${BASE}/hero-bg.jpeg`}
-          alt="OK살수 살수차·굴착기 전문 — 즉시 출동"
-          className="absolute inset-0 w-full h-full object-cover object-left"
+          src={`${BASE}/hero-main.jpeg`}
+          alt="OK살수차 — 어디든 달려갑니다"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
