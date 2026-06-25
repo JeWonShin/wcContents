@@ -147,14 +147,14 @@ export default function HomePage() {
         {/* 모바일: 흐르는 티커 */}
         <div className="sm:hidden overflow-hidden">
           <span className="announcement-ticker inline-block whitespace-nowrap">
-            📍 활동지역 &nbsp;·&nbsp; 평택 · 포승 · 안중 · 화성 · 안성 · 오산 · 천안 · 아산
-            &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
+            📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
+            출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
           </span>
         </div>
         {/* 데스크탑: 한 줄 중앙 */}
         <div className="hidden sm:block text-center">
-          📍 활동지역 &nbsp;·&nbsp; 평택 · 포승 · 안중 · 화성 · 안성 · 오산 · 천안 · 아산
-          &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp;{" "}
+          📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
+          출동! &nbsp;·&nbsp;{" "}
           <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
             📞 {PHONE}
           </a>
