@@ -8,6 +8,15 @@ export const metadata: Metadata = {
 };
 
 const PHONE = "010-4894-5037";
+const KAKAO = "https://open.kakao.com/o/sK8HVKAi";
+const BASE = "/wcContents";
+
+const heroTrustItems = [
+  "건설현장 전문 살수차",
+  "세금계산서 발행 가능",
+  "장비보험 가입 / 안전관리 철저",
+  "대형 현장 다수 작업",
+];
 
 const serviceCardsHome = [
   {
@@ -15,14 +24,16 @@ const serviceCardsHome = [
     title: "살수차",
     items: ["도로청소 / 비산먼지 저감", "용수공급", "긴급살수", "현장 살수작업"],
     href: "/services#construction",
-    accent: "border-brand-secondary",
+    photo: `${BASE}/gallery/road-truck-spray.jpeg`,
+    gradient: "from-blue-950/50 to-blue-950/92",
   },
   {
     icon: "🌳",
     title: "조경·공원조성",
     items: ["공원조성 / 잔디·수목식재", "정원조성 / 조경시설 설치", "조경 유지관리"],
     href: "/services#landscape",
-    accent: "border-emerald-500",
+    photo: `${BASE}/gallery/autumn-trees.jpeg`,
+    gradient: "from-emerald-950/50 to-emerald-950/92",
   },
   {
     icon: "🏗️",
@@ -33,7 +44,8 @@ const serviceCardsHome = [
       "배수관 / 맨홀 / 오수받이 시공",
     ],
     href: "/services#excavator",
-    accent: "border-amber-500",
+    photo: `${BASE}/gallery/night-excavation.jpeg`,
+    gradient: "from-amber-950/50 to-amber-950/92",
   },
   {
     icon: "🚚",
@@ -44,7 +56,8 @@ const serviceCardsHome = [
       "신속하고 안전한 운반 서비스",
     ],
     href: "/services",
-    accent: "border-slate-400",
+    photo: `${BASE}/gallery/truck-site-work.jpeg`,
+    gradient: "from-slate-900/50 to-slate-950/92",
   },
 ];
 
@@ -55,12 +68,6 @@ const workCategories = [
   { icon: "⛏️", label: "토목작업", sub: "관로·구조물", href: "/services#excavator" },
   { icon: "💧", label: "용수공급", sub: "살수·급수작업", href: "/services#living" },
   { icon: "🚛", label: "폐기물·운반", sub: "토사·폐기물 운반", href: "/services" },
-];
-
-const stats = [
-  { value: "8", unit: "개+", label: "지역 즉시 출동" },
-  { value: "24", unit: "시간", label: "긴급 대응" },
-  { value: "多", unit: "대 보유", label: "살수차 다량" },
 ];
 
 const painPoints = [
@@ -118,8 +125,6 @@ const equipment = [
   },
 ];
 
-const serviceArea = ["평택", "화성", "안성", "오산", "천안", "아산"];
-
 const faq = [
   {
     q: "얼마나 빨리 출동할 수 있나요?",
@@ -144,14 +149,12 @@ export default function HomePage() {
     <>
       {/* 상단 공지 바 */}
       <div className="bg-red-600 text-white text-sm py-3 font-bold tracking-wide">
-        {/* 모바일: 흐르는 티커 */}
         <div className="sm:hidden overflow-hidden">
           <span className="announcement-ticker inline-block whitespace-nowrap">
             📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
             출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
           </span>
         </div>
-        {/* 데스크탑: 한 줄 중앙 */}
         <div className="hidden sm:block text-center">
           📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
           출동! &nbsp;·&nbsp;{" "}
@@ -161,28 +164,36 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ① Hero */}
-      <section className="relative overflow-hidden min-h-[440px] sm:min-h-[560px]">
+      {/* ① Hero — 트럭 사진 배경 + HTML 텍스트 */}
+      <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src="/wcContents/hero-bg.jpeg"
-          alt="OK살수 작업 현장 — 살수차·포크레인·조경건설 전문"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          src={`${BASE}/gallery/truck-dawn.jpeg`}
+          alt="OK살수 살수차 — 즉시 출동 대기"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/45 to-black/85" />
-        <div className="relative z-10 min-h-[440px] sm:min-h-[560px] flex flex-col justify-end pb-10 px-6">
-          <div className="max-w-2xl mx-auto w-full text-center text-white">
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-4 py-1.5 rounded-full mb-4">
-              📍 평택·화성·안성·오산·천안·아산 즉시 출동
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/88" />
+        <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
+          <div className="max-w-2xl mx-auto w-full text-white">
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-blue-200 text-xs font-bold px-4 py-1.5 rounded-full mb-5">
+              조경·건설 굴착기·관로작업 전문
             </div>
-            <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-3 drop-shadow-lg">
+            <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-4 drop-shadow-lg">
               현장이 부르면,
               <br />
               <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
             </h1>
-            <p className="text-base sm:text-lg text-white/90 font-semibold mb-8 drop-shadow">
-              살수차 · 포크레인 · 덤프 · 조경건설 — 한 번에 해결
+            <p className="text-base sm:text-lg text-white/85 font-bold mb-6 drop-shadow">
+              조경·건설 포크레인 / 살수차 전문 운영
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <ul className="space-y-2 mb-8">
+              {heroTrustItems.map((item) => (
+                <li key={item} className="flex items-center gap-2 text-sm text-white/90">
+                  <span className="text-yellow-300 font-black text-base flex-shrink-0">✓</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={`tel:${PHONE.replace(/-/g, "")}`}
                 className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:bg-green-600 active:scale-95 transition-all"
@@ -190,7 +201,7 @@ export default function HomePage() {
                 📞 {PHONE}
               </a>
               <a
-                href="https://open.kakao.com/o/sK8HVKAi"
+                href={KAKAO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:brightness-95 active:scale-95 transition-all"
@@ -202,26 +213,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ② Stats Bar */}
-      <div className="bg-brand-primary text-white py-8">
-        <div className="max-w-3xl mx-auto px-4">
-          <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
-            {stats.map((s) => (
-              <div key={s.label} className="px-2">
-                <div className="text-4xl sm:text-5xl font-black text-yellow-300 leading-none whitespace-nowrap">
-                  {s.value}
-                  <span className="text-lg font-bold">{s.unit}</span>
-                </div>
-                <div className="text-xs font-bold text-white/90 mt-2 whitespace-nowrap">
-                  {s.label}
-                </div>
+      {/* ② 24시간 + 활동지역 */}
+      <div className="bg-brand-primary text-white">
+        <div className="max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 divide-x divide-white/20">
+            <div className="py-6 px-6 text-center">
+              <div className="text-4xl font-black text-yellow-300 leading-none mb-1 whitespace-nowrap">
+                24시간
               </div>
-            ))}
+              <div className="text-sm font-bold text-white/90">긴급출동 가능!</div>
+            </div>
+            <div className="py-6 px-6 text-center">
+              <div className="text-xs font-bold text-yellow-300 mb-1.5 tracking-wider">
+                활동지역
+              </div>
+              <div className="text-sm font-semibold text-white/90 leading-relaxed">
+                평택 · 안성 · 화성
+                <br />
+                오산 · 천안 · 아산
+              </div>
+              <div className="text-xs font-bold text-yellow-200 mt-1">전지역 출동!</div>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* ②-b Summer Banner */}
+      {/* ②-b 여름 배너 */}
       <section className="bg-gradient-to-r from-cyan-500 to-blue-500 py-8">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex flex-col sm:flex-row items-center gap-5 text-white">
@@ -255,7 +272,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ③ Pain Point — 공감: 고객의 상황 짚어주기 */}
+      {/* ③ Pain Point */}
       <section className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-8">
@@ -285,7 +302,7 @@ export default function HomePage() {
             <p className="text-xs text-brand-gray mt-3">
               통화가 어려우신 경우&nbsp;
               <a
-                href="https://open.kakao.com/o/sK8HVKAi"
+                href={KAKAO}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline underline-offset-2 text-brand-secondary"
@@ -298,43 +315,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ④ 서비스 라인업 */}
-      <section className="py-12 bg-white">
+      {/* ④ 서비스 라인업 — 포토 카드 */}
+      <section className="py-12 bg-[#0a2240]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="section-title">서비스 라인업</h2>
-            <p className="section-subtitle">조경·건설 포크레인 / 살수차 전문 운영</p>
+            <h2 className="text-xl sm:text-2xl font-black text-yellow-300">
+              조경·건설 포크레인 / 살수차 전문 운영
+            </h2>
+            <p className="text-blue-300 text-sm mt-1">원하시는 서비스를 선택하세요</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
             {serviceCardsHome.map((s) => (
               <Link
                 key={s.title}
                 href={s.href}
-                className={`card border-t-4 ${s.accent} p-4 hover:shadow-md transition-shadow group`}
+                className="relative overflow-hidden rounded-xl h-[220px] sm:h-[250px] block group"
               >
-                <div className="text-3xl mb-2">{s.icon}</div>
-                <h3 className="font-black text-brand-primary text-base sm:text-lg mb-2 group-hover:text-brand-secondary transition-colors">
-                  {s.title}
-                </h3>
-                <ul className="space-y-1">
-                  {s.items.map((item) => (
-                    <li key={item} className="text-sm text-gray-600 flex items-start gap-1">
-                      <span className="text-brand-accent flex-shrink-0 mt-0.5">·</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <img
+                  src={s.photo}
+                  alt={s.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-b ${s.gradient}`} />
+                <div className="relative z-10 p-4 h-full flex flex-col justify-between">
+                  <span className="text-2xl">{s.icon}</span>
+                  <div>
+                    <h3 className="font-black text-yellow-300 text-sm sm:text-base mb-2">
+                      {s.title}
+                    </h3>
+                    <ul className="space-y-1">
+                      {s.items.map((item) => (
+                        <li key={item} className="text-xs text-white/85 flex items-start gap-1">
+                          <span className="text-yellow-400 flex-shrink-0 mt-0.5">·</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </Link>
             ))}
           </div>
+
           {/* 원스톱 섭외 */}
-          <div className="card bg-brand-primary text-white p-5 flex flex-col sm:flex-row items-center gap-4">
-            <div className="text-4xl flex-shrink-0">🤝</div>
-            <div className="flex-1 text-center sm:text-left">
-              <h3 className="font-black text-lg mb-1">원스톱 섭외</h3>
+          <div className="bg-white/10 border border-white/20 rounded-xl p-5 flex flex-col sm:flex-row items-center gap-4 text-white text-center sm:text-left">
+            <div className="text-5xl flex-shrink-0">🤝</div>
+            <div className="flex-1">
+              <h3 className="font-black text-yellow-300 text-xl mb-1">원스톱 섭외</h3>
               <p className="text-blue-200 text-sm">
-                살수차·포크레인·덤프·조경 모두 한 번의 연락으로 —{" "}
-                <span className="text-yellow-300 font-bold">시간과 비용을 절약하세요!</span>
+                살수차·포크레인·덤프·조경 — 원스톱 서비스로 시간과 비용을 절약하세요!
               </p>
             </div>
             <a
@@ -348,22 +377,22 @@ export default function HomePage() {
       </section>
 
       {/* ④-b 작업 분야 */}
-      <section className="py-7 bg-brand-bg border-y border-brand-light">
+      <section className="py-8 bg-[#071830] border-t border-white/10">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
             {workCategories.map((cat) => (
               <Link
                 key={cat.label}
                 href={cat.href}
-                className="flex flex-col items-center gap-1.5 group"
+                className="flex flex-col items-center gap-2 group"
               >
-                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
+                <div className="w-14 h-14 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-2xl group-hover:bg-white/20 transition-colors">
                   {cat.icon}
                 </div>
-                <span className="text-sm font-bold text-brand-primary text-center leading-tight">
+                <span className="text-sm font-bold text-white text-center leading-tight">
                   {cat.label}
                 </span>
-                <span className="text-xs font-medium text-brand-gray text-center leading-tight">
+                <span className="text-xs font-medium text-blue-300 text-center leading-tight">
                   {cat.sub}
                 </span>
               </Link>
@@ -372,7 +401,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑤ Trust — 해결: 왜 OK살수인가 */}
+      {/* ⑤ Trust */}
       <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -402,7 +431,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑥ Equipment Section */}
+      {/* ⑥ Equipment */}
       <section className="py-16 bg-brand-bg">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -435,7 +464,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑦ FAQ — 이탈률 낮추기 */}
+      {/* ⑦ FAQ */}
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-10">
@@ -455,7 +484,7 @@ export default function HomePage() {
               단가표 자세히 보기
             </Link>
             <a
-              href="https://open.kakao.com/o/sK8HVKAi"
+              href={KAKAO}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta bg-kakao text-gray-900 text-sm"
@@ -466,33 +495,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⑧ Service Area */}
-      <section className="py-16 bg-brand-bg">
-        <div className="max-w-5xl mx-auto px-4 text-center">
-          <h2 className="section-title">서비스 지역</h2>
-          <p className="section-subtitle">아래 지역 전 구역에 즉시 출동합니다</p>
-          <div className="flex flex-wrap justify-center gap-3 mt-2">
-            {serviceArea.map((city) => (
-              <div
-                key={city}
-                className="bg-white border-2 border-brand-accent text-brand-primary font-bold text-lg px-8 py-4 rounded-xl shadow-sm hover:bg-brand-accent hover:text-white transition-all cursor-default"
-              >
-                {city}
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-sm text-brand-gray">
-            위 지역 외에도 문의 주시면 출동 가능 여부를 확인해 드립니다.
-          </p>
-        </div>
-      </section>
-
-      {/* ⑨ Final CTA Banner — 전환 */}
-      <section className="bg-brand-primary py-16">
+      {/* ⑧ Final CTA — 전화 한 통이면 OK! */}
+      <section className="bg-[#080f1e] py-16 border-t-4 border-yellow-400">
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
-          <p className="text-yellow-300 font-black text-3xl md:text-4xl mb-2">전화 한 통이면 OK!</p>
-          <p className="text-blue-100 text-base mb-1">빠른 출동! 깔끔한 작업! 믿고 맡기세요!</p>
-          <p className="text-brand-light text-sm italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
+          <p className="text-yellow-300 font-black text-4xl md:text-5xl mb-2">전화 한 통이면 OK!</p>
+          <p className="text-white/90 text-lg font-bold mb-1">
+            빠른 출동! 깔끔한 작업! 믿고 맡기세요!
+          </p>
+          <p className="text-white/50 text-sm italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE.replace(/-/g, "")}`}
@@ -501,7 +511,7 @@ export default function HomePage() {
               📞 {PHONE}
             </a>
             <a
-              href="https://open.kakao.com/o/sK8HVKAi"
+              href={KAKAO}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-bold px-8 py-4 rounded-xl transition hover:brightness-95 active:scale-95"
