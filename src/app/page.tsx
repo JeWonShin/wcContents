@@ -164,17 +164,17 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ① Hero — 다량 차량 보유 + 신뢰 뱃지 */}
-      <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px] bg-black">
+      {/* ① Hero */}
+      <section className="relative overflow-hidden bg-black">
         <img
           src={`${BASE}/hero-main.jpeg`}
           alt="OK살수차 — 어디든 달려갑니다"
-          className="absolute inset-0 w-full h-full object-contain object-center"
+          className="w-full block"
         />
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex flex-col justify-center px-6 py-8">
           <div className="max-w-2xl mx-auto w-full">
-            <div className="bg-black/50 backdrop-blur-sm rounded-2xl px-6 py-8 text-white">
+            <div className="bg-black/55 backdrop-blur-sm rounded-2xl px-6 py-8 text-white">
               <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-3">
                 현장이 부르면,
                 <br />
