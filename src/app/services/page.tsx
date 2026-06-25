@@ -91,6 +91,20 @@ const services = [
     ],
     bg: "from-brand-nature to-teal-600",
   },
+  {
+    id: "waterplay",
+    icon: "🌊",
+    title: "물놀이장·워터슬라이드 급수",
+    subtitle: "대용량 급수 · 설치 지원 · 행사장·학교·축제",
+    desc: "대형 워터슬라이드, 물놀이장 운영에 필요한 급수부터 설치 지원까지 한 번에 해결합니다. 행사장·축제·학교·체육대회·기업행사 현장에 신속 출동합니다.",
+    items: [
+      "대용량 물공급 — 대형 워터슬라이드·풀장 충수",
+      "급수차 현장 대기 — 운영 중 지속 급수",
+      "행사장·학교·체육대회·축제·기업행사",
+      "설치 지원 및 안전한 현장 대응",
+    ],
+    bg: "from-cyan-500 to-blue-500",
+  },
 ];
 
 export default function ServicesPage() {

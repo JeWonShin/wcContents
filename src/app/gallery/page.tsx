@@ -227,6 +227,20 @@ const items: PhotoItem[] = [
   },
   {
     type: "photo",
+    src: "/gallery/waterslide-event.jpeg",
+    alt: "야외 행사장 대형 워터슬라이드 물놀이장 운영",
+    cat: "생활·행사",
+    label: "물놀이장·워터슬라이드 급수 지원",
+  },
+  {
+    type: "photo",
+    src: "/gallery/waterslide-closeup.jpeg",
+    alt: "대형 워터슬라이드 설치 현장",
+    cat: "생활·행사",
+    label: "워터슬라이드 설치 현장 급수",
+  },
+  {
+    type: "photo",
     src: "/gallery/event-sunset.jpeg",
     alt: "야외 행사장 긴급 용수 지원 — 석양",
     cat: "생활·행사",

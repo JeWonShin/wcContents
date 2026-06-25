@@ -188,6 +188,40 @@ export default function HomePage() {
         </div>
       </div>
 
+      {/* ②-b Summer Banner */}
+      <section className="bg-gradient-to-r from-cyan-500 to-blue-500 py-8">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center gap-5 text-white">
+            <div className="text-5xl flex-shrink-0">🌊</div>
+            <div className="flex-1 text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-2 backdrop-blur-sm">
+                🌞 여름 시즌 특별 대응
+              </div>
+              <h2 className="text-xl sm:text-2xl font-black leading-snug mb-1">
+                워터슬라이드·물놀이장 급수 지원
+              </h2>
+              <p className="text-blue-100 text-sm">
+                대용량 급수 · 현장 대기 · 행사장·학교·체육대회·축제 즉시 출동
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 flex-shrink-0 w-full sm:w-auto">
+              <a
+                href={`tel:${PHONE.replace(/-/g, "")}`}
+                className="flex items-center justify-center gap-2 bg-white text-blue-600 font-black px-6 py-3 rounded-xl shadow-lg hover:bg-blue-50 transition whitespace-nowrap"
+              >
+                📞 지금 바로 문의
+              </a>
+              <Link
+                href="/services#waterplay"
+                className="text-center text-blue-100 text-xs underline underline-offset-2 hover:text-white transition"
+              >
+                서비스 자세히 보기 →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ③ Pain Point — 공감: 고객의 상황 짚어주기 */}
       <section className="py-14 bg-white">
         <div className="max-w-3xl mx-auto px-4">
