@@ -180,14 +180,12 @@ export default function HomePage() {
             <span className="opacity-75 text-[11px]">→</span>
           </div>
         </Link>
-        <div className="absolute inset-0 flex flex-col justify-center px-6">
-          <div className="max-w-2xl mx-auto w-full text-white">
-            <h1 className="text-3xl sm:text-5xl font-black leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-              현장이 부르면,
-              <br />
-              <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
-            </h1>
-          </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
+          <h1 className="text-3xl sm:text-5xl font-black leading-tight text-center text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+            현장이 부르면,
+            <br />
+            <span className="text-yellow-300">OK살수차</span>가 달려갑니다!
+          </h1>
         </div>
       </section>
 
