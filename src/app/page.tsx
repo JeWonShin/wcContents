@@ -9,13 +9,52 @@ export const metadata: Metadata = {
 
 const PHONE = "010-4894-5037";
 
-const quickMenus = [
-  { icon: "🚧", label: "공사·현장", href: "/services#construction" },
-  { icon: "🌳", label: "조경·농업", href: "/services#landscape" },
-  { icon: "💧", label: "생활·식수", href: "/services#living" },
-  { icon: "🏗️", label: "포크레인", href: "/services#excavator" },
-  { icon: "🌿", label: "조경건설", href: "/services#landscaping" },
-  { icon: "💰", label: "단가표", href: "/pricing" },
+const serviceCardsHome = [
+  {
+    icon: "🚒",
+    title: "살수차",
+    items: ["도로청소 / 비산먼지 저감", "용수공급", "긴급살수", "현장 살수작업"],
+    href: "/services#construction",
+    accent: "border-brand-secondary",
+  },
+  {
+    icon: "🌳",
+    title: "조경·공원조성",
+    items: ["공원조성 / 잔디·수목식재", "정원조성 / 조경시설 설치", "조경 유지관리"],
+    href: "/services#landscape",
+    accent: "border-emerald-500",
+  },
+  {
+    icon: "🏗️",
+    title: "굴착기(관로작업)",
+    items: [
+      "상·하수도 관로공사",
+      "우·오수관 / 통신관로 / 전선관로",
+      "배수관 / 맨홀 / 오수받이 시공",
+    ],
+    href: "/services#excavator",
+    accent: "border-amber-500",
+  },
+  {
+    icon: "🚚",
+    title: "덤프",
+    items: [
+      "골재운반 / 토사운반 / 잔토처리",
+      "현장자재 운반 / 폐기물 운반",
+      "신속하고 안전한 운반 서비스",
+    ],
+    href: "/services",
+    accent: "border-slate-400",
+  },
+];
+
+const workCategories = [
+  { icon: "🌿", label: "조경작업", sub: "공원조성 등", href: "/services#landscape" },
+  { icon: "🔩", label: "관로작업", sub: "상·하수도", href: "/services#excavator" },
+  { icon: "🏢", label: "건설작업", sub: "토목·기반공사", href: "/services#construction" },
+  { icon: "⛏️", label: "토목작업", sub: "관로·구조물", href: "/services#excavator" },
+  { icon: "💧", label: "용수공급", sub: "살수·급수작업", href: "/services#living" },
+  { icon: "🚛", label: "폐기물·운반", sub: "토사·폐기물 운반", href: "/services" },
 ];
 
 const stats = [
@@ -226,21 +265,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ④ Quick Menu */}
-      <section className="bg-brand-bg py-7 border-y border-brand-light">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-4 gap-y-5 md:flex md:justify-center md:gap-10">
-            {quickMenus.map((m) => (
+      {/* ④ 서비스 라인업 */}
+      <section className="py-12 bg-white">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="section-title">서비스 라인업</h2>
+            <p className="section-subtitle">조경·건설 포크레인 / 살수차 전문 운영</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+            {serviceCardsHome.map((s) => (
               <Link
-                key={m.label}
-                href={m.href}
+                key={s.title}
+                href={s.href}
+                className={`card border-t-4 ${s.accent} p-4 hover:shadow-md transition-shadow group`}
+              >
+                <div className="text-3xl mb-2">{s.icon}</div>
+                <h3 className="font-black text-brand-primary text-sm sm:text-base mb-2 group-hover:text-brand-secondary transition-colors">
+                  {s.title}
+                </h3>
+                <ul className="space-y-1">
+                  {s.items.map((item) => (
+                    <li key={item} className="text-xs text-gray-600 flex items-start gap-1">
+                      <span className="text-brand-accent flex-shrink-0 mt-0.5">·</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </Link>
+            ))}
+          </div>
+          {/* 원스톱 섭외 */}
+          <div className="card bg-brand-primary text-white p-5 flex flex-col sm:flex-row items-center gap-4">
+            <div className="text-4xl flex-shrink-0">🤝</div>
+            <div className="flex-1 text-center sm:text-left">
+              <h3 className="font-black text-lg mb-1">원스톱 섭외</h3>
+              <p className="text-blue-200 text-sm">
+                살수차·포크레인·덤프·조경 모두 한 번의 연락으로 —{" "}
+                <span className="text-yellow-300 font-bold">시간과 비용을 절약하세요!</span>
+              </p>
+            </div>
+            <a
+              href={`tel:${PHONE.replace(/-/g, "")}`}
+              className="flex-shrink-0 bg-phone text-white font-black px-6 py-3 rounded-xl hover:bg-green-600 transition whitespace-nowrap"
+            >
+              📞 지금 문의
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ④-b 작업 분야 */}
+      <section className="py-7 bg-brand-bg border-y border-brand-light">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
+            {workCategories.map((cat) => (
+              <Link
+                key={cat.label}
+                href={cat.href}
                 className="flex flex-col items-center gap-1.5 group"
               >
-                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
-                  {m.icon}
+                <div className="w-13 h-13 w-12 h-12 rounded-full bg-white flex items-center justify-center text-xl group-hover:bg-brand-light transition-colors shadow-sm">
+                  {cat.icon}
                 </div>
-                <span className="text-xs font-medium text-brand-primary text-center">
-                  {m.label}
+                <span className="text-xs font-bold text-brand-primary text-center leading-tight">
+                  {cat.label}
+                </span>
+                <span className="text-[10px] text-brand-gray text-center leading-tight">
+                  {cat.sub}
                 </span>
               </Link>
             ))}
@@ -366,12 +457,9 @@ export default function HomePage() {
       {/* ⑨ Final CTA Banner — 전환 */}
       <section className="bg-brand-primary py-16">
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
-          <h2 className="text-2xl md:text-3xl font-black mb-3">지금 바로 연락하세요</h2>
-          <p className="text-blue-200 mb-8">
-            통화가 어려운 시간에도 카카오톡으로 24시간 접수 가능합니다.
-            <br />
-            빠른 시간 내 회신 드리겠습니다.
-          </p>
+          <p className="text-yellow-300 font-black text-2xl md:text-3xl mb-1">전화 한 통이면 OK!</p>
+          <p className="text-blue-100 text-sm mb-1">빠른 출동! 깔끔한 작업! 믿고 맡기세요!</p>
+          <p className="text-brand-light text-xs italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE.replace(/-/g, "")}`}
