@@ -143,7 +143,7 @@ export default function HomePage() {
   return (
     <>
       {/* 상단 공지 바 */}
-      <div className="bg-red-600 text-white text-xs sm:text-sm py-2.5 font-bold tracking-wide">
+      <div className="bg-red-600 text-white text-sm py-3 font-bold tracking-wide">
         {/* 모바일: 흐르는 티커 */}
         <div className="sm:hidden overflow-hidden">
           <span className="announcement-ticker inline-block whitespace-nowrap">
@@ -172,16 +172,16 @@ export default function HomePage() {
       </section>
 
       {/* ② Stats Bar */}
-      <div className="bg-brand-primary text-white py-6">
+      <div className="bg-brand-primary text-white py-8">
         <div className="max-w-3xl mx-auto px-4">
           <div className="grid grid-cols-3 gap-2 text-center divide-x divide-white/20">
             {stats.map((s) => (
               <div key={s.label} className="px-4">
-                <div className="text-3xl sm:text-4xl font-black text-yellow-300 leading-none">
+                <div className="text-4xl sm:text-5xl font-black text-yellow-300 leading-none">
                   {s.value}
-                  <span className="text-base font-bold">{s.unit}</span>
+                  <span className="text-xl font-bold">{s.unit}</span>
                 </div>
-                <div className="text-xs text-blue-200 mt-1.5 tracking-wide">{s.label}</div>
+                <div className="text-sm font-bold text-white/90 mt-2">{s.label}</div>
               </div>
             ))}
           </div>
@@ -280,12 +280,12 @@ export default function HomePage() {
                 className={`card border-t-4 ${s.accent} p-4 hover:shadow-md transition-shadow group`}
               >
                 <div className="text-3xl mb-2">{s.icon}</div>
-                <h3 className="font-black text-brand-primary text-sm sm:text-base mb-2 group-hover:text-brand-secondary transition-colors">
+                <h3 className="font-black text-brand-primary text-base sm:text-lg mb-2 group-hover:text-brand-secondary transition-colors">
                   {s.title}
                 </h3>
                 <ul className="space-y-1">
                   {s.items.map((item) => (
-                    <li key={item} className="text-xs text-gray-600 flex items-start gap-1">
+                    <li key={item} className="text-sm text-gray-600 flex items-start gap-1">
                       <span className="text-brand-accent flex-shrink-0 mt-0.5">·</span>
                       {item}
                     </li>
@@ -324,13 +324,13 @@ export default function HomePage() {
                 href={cat.href}
                 className="flex flex-col items-center gap-1.5 group"
               >
-                <div className="w-13 h-13 w-12 h-12 rounded-full bg-white flex items-center justify-center text-xl group-hover:bg-brand-light transition-colors shadow-sm">
+                <div className="w-14 h-14 rounded-full bg-white flex items-center justify-center text-2xl group-hover:bg-brand-light transition-colors shadow-sm">
                   {cat.icon}
                 </div>
-                <span className="text-xs font-bold text-brand-primary text-center leading-tight">
+                <span className="text-sm font-bold text-brand-primary text-center leading-tight">
                   {cat.label}
                 </span>
-                <span className="text-[10px] text-brand-gray text-center leading-tight">
+                <span className="text-xs font-medium text-brand-gray text-center leading-tight">
                   {cat.sub}
                 </span>
               </Link>
@@ -350,7 +350,7 @@ export default function HomePage() {
             {trustPoints.map((t) => (
               <div key={t.title} className="card text-center hover:shadow-md transition-shadow">
                 <div className="text-4xl mb-3">{t.icon}</div>
-                <div className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-3 py-1 rounded-full mb-2">
+                <div className="inline-block bg-brand-accent/10 text-brand-accent text-sm font-bold px-3 py-1 rounded-full mb-2">
                   {t.badge}
                 </div>
                 <h3 className="font-bold text-brand-primary text-lg mb-2">{t.title}</h3>
@@ -383,11 +383,11 @@ export default function HomePage() {
                 className="bg-white border border-brand-light rounded-xl p-6 text-center hover:shadow-md hover:border-brand-accent transition-all"
               >
                 <div className="text-5xl mb-3">{e.icon}</div>
-                <div className="inline-block bg-brand-accent/10 text-brand-accent text-xs font-bold px-3 py-1 rounded-full mb-2">
+                <div className="inline-block bg-brand-accent/10 text-brand-accent text-sm font-bold px-3 py-1 rounded-full mb-2">
                   {e.badge}
                 </div>
                 <div className="font-bold text-brand-primary text-lg mb-1">{e.name}</div>
-                <div className="text-xs text-brand-gray leading-relaxed">{e.spec}</div>
+                <div className="text-sm text-brand-gray leading-relaxed">{e.spec}</div>
               </div>
             ))}
           </div>
@@ -457,9 +457,9 @@ export default function HomePage() {
       {/* ⑨ Final CTA Banner — 전환 */}
       <section className="bg-brand-primary py-16">
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
-          <p className="text-yellow-300 font-black text-2xl md:text-3xl mb-1">전화 한 통이면 OK!</p>
-          <p className="text-blue-100 text-sm mb-1">빠른 출동! 깔끔한 작업! 믿고 맡기세요!</p>
-          <p className="text-brand-light text-xs italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
+          <p className="text-yellow-300 font-black text-3xl md:text-4xl mb-2">전화 한 통이면 OK!</p>
+          <p className="text-blue-100 text-base mb-1">빠른 출동! 깔끔한 작업! 믿고 맡기세요!</p>
+          <p className="text-brand-light text-sm italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={`tel:${PHONE.replace(/-/g, "")}`}
