@@ -164,19 +164,16 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ① Hero — 트럭 사진 배경 + HTML 텍스트 */}
+      {/* ① Hero — 트럭+포크레인 배경 + HTML 텍스트 */}
       <section className="relative overflow-hidden min-h-[520px] sm:min-h-[620px]">
         <img
-          src={`${BASE}/gallery/truck-dawn.jpeg`}
-          alt="OK살수 살수차 — 즉시 출동 대기"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          src={`${BASE}/hero-bg.jpeg`}
+          alt="OK살수 살수차·포크레인 현장 작업"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/88" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/72 to-black/90" />
         <div className="relative z-10 min-h-[520px] sm:min-h-[620px] flex flex-col justify-center px-6 py-16">
           <div className="max-w-2xl mx-auto w-full text-white">
-            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 text-blue-200 text-xs font-bold px-4 py-1.5 rounded-full mb-5">
-              조경·건설 굴착기·관로작업 전문
-            </div>
             <h1 className="text-3xl sm:text-5xl font-black leading-tight mb-4 drop-shadow-lg">
               현장이 부르면,
               <br />
@@ -185,7 +182,7 @@ export default function HomePage() {
             <p className="text-base sm:text-lg text-white/85 font-bold mb-6 drop-shadow">
               조경·건설 포크레인 / 살수차 전문 운영
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-2">
               {heroTrustItems.map((item) => (
                 <li key={item} className="flex items-center gap-2 text-sm text-white/90">
                   <span className="text-yellow-300 font-black text-base flex-shrink-0">✓</span>
@@ -193,22 +190,6 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href={`tel:${PHONE.replace(/-/g, "")}`}
-                className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:bg-green-600 active:scale-95 transition-all"
-              >
-                📞 {PHONE}
-              </a>
-              <a
-                href={KAKAO}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-black text-xl px-8 py-4 rounded-xl shadow-xl hover:brightness-95 active:scale-95 transition-all"
-              >
-                💬 카카오톡 문의
-              </a>
-            </div>
           </div>
         </div>
       </section>
