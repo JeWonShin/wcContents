@@ -165,6 +165,17 @@ export default function HomePage() {
           className="w-full block"
         />
         <div className="absolute inset-0 bg-black/30" />
+        {/* 여름 물놀이 링크 뱃지 */}
+        <Link
+          href="/services#waterplay"
+          className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-cyan-500/80 backdrop-blur-sm text-white text-xs font-black px-3 py-2 rounded-full shadow-lg hover:bg-cyan-400/90 transition-colors"
+        >
+          <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-80" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-white" />
+          </span>
+          🌊 여름 물놀이장 급수
+        </Link>
         <div className="absolute inset-0 flex flex-col justify-center px-6">
           <div className="max-w-2xl mx-auto w-full text-white">
             <h1 className="text-3xl sm:text-5xl font-black leading-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
