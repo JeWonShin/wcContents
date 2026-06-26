@@ -17,7 +17,7 @@ const serviceCardsHome = [
     title: "살수차",
     items: ["도로청소 / 비산먼지 저감", "용수공급", "긴급살수", "현장 살수작업"],
     href: "/services#construction",
-    photo: `${BASE}/gallery/construction-spray.jpeg`,
+    photo: `${BASE}/gallery/salsu-road-new.jpeg`,
     gradient: "from-blue-950/50 to-blue-950/92",
   },
   {
@@ -25,7 +25,7 @@ const serviceCardsHome = [
     title: "조경·공원조성",
     items: ["공원조성 / 잔디·수목식재", "정원조성 / 조경시설 설치", "조경 유지관리"],
     href: "/services#landscape",
-    photo: `${BASE}/gallery/autumn-trees.jpeg`,
+    photo: `${BASE}/gallery/landscape-work-new.jpeg`,
     gradient: "from-emerald-950/50 to-emerald-950/92",
   },
   {
@@ -49,7 +49,7 @@ const serviceCardsHome = [
       "신속하고 안전한 운반 서비스",
     ],
     href: "/services#dump",
-    photo: `${BASE}/gallery/truck-site-work.jpeg`,
+    photo: `${BASE}/gallery/dump-truck-new.jpeg`,
     gradient: "from-slate-900/50 to-slate-950/92",
   },
 ];
