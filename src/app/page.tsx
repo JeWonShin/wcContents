@@ -478,7 +478,7 @@ export default function HomePage() {
       </section>
 
       {/* ⑧ Final CTA — 전화 한 통이면 OK! */}
-      <section className="bg-[#080f1e] py-16 border-t-4 border-yellow-400">
+      <section className="bg-[#0a2240] py-16 border-t-4 border-yellow-400">
         <div className="max-w-2xl mx-auto px-4 text-center text-white">
           <p className="text-yellow-300 font-black text-4xl md:text-5xl mb-2">전화 한 통이면 OK!</p>
           <p className="text-white/90 text-lg font-bold mb-1">
