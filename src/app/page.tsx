@@ -51,6 +51,7 @@ const serviceCardsHome = [
     href: "/services#dump",
     photo: `${BASE}/gallery/dump-truck-new.jpeg`,
     gradient: "from-slate-900/50 to-slate-950/92",
+    objectPos: "object-[60%_center]",
   },
 ];
 
@@ -314,7 +315,7 @@ export default function HomePage() {
                 <img
                   src={s.photo}
                   alt={s.title}
-                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className={`absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${"objectPos" in s ? s.objectPos : "object-center"}`}
                 />
                 <div className={`absolute inset-0 bg-gradient-to-b ${s.gradient}`} />
                 <div className="relative z-10 p-4 h-full flex flex-col justify-between">
