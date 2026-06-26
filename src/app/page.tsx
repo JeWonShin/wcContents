@@ -160,7 +160,7 @@ export default function HomePage() {
       {/* ① Hero */}
       <section className="relative overflow-hidden bg-black">
         <img
-          src={`${BASE}/hero-main.jpeg`}
+          src={`${BASE}/hero-v2.jpeg`}
           alt="OK살수차 — 어디든 달려갑니다"
           className="w-full block"
         />
