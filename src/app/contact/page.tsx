@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "고객센터 · 견적 문의 | OK살수",
-  description: "살수차·급수차 온라인 견적 문의. 자주 묻는 질문(FAQ).",
+  title: "고객센터 | OK살수",
+  description: "살수차·급수차 출동 문의. 전화·카카오톡으로 빠르게 상담하세요. 자주 묻는 질문(FAQ).",
 };
 
 const faqs = [
