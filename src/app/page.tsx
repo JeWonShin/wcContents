@@ -165,10 +165,10 @@ export default function HomePage() {
           className="w-full block"
         />
         <div className="absolute inset-0 bg-black/30" />
-        {/* 여름 물놀이 링크 뱃지 */}
+        {/* 여름 물놀이 링크 뱃지 — hidden으로 숨김 (롤백: hidden 제거) */}
         <Link
           href="/services#waterplay"
-          className="absolute top-3 left-3 z-20 hover:scale-105 active:scale-95 transition-transform"
+          className="hidden absolute top-3 left-3 z-20 hover:scale-105 active:scale-95 transition-transform"
         >
           <div className="flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-black px-4 py-2.5 rounded-full shadow-[0_0_16px_4px_rgba(34,211,238,0.55)] border border-white/30">
             <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
@@ -180,7 +180,8 @@ export default function HomePage() {
             <span className="opacity-75 text-[11px]">→</span>
           </div>
         </Link>
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-6">
+        {/* 히어로 헤드라인 — hidden으로 숨김 (롤백: hidden 제거) */}
+        <div className="hidden absolute inset-0 flex flex-col items-center justify-center px-6">
           <h1 className="text-3xl sm:text-5xl font-black leading-tight text-center text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
             현장이 부르면,
             <br />
