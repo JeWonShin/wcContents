@@ -230,6 +230,9 @@ export default function HomePage() {
               <p className="text-blue-100 text-sm">
                 대용량 급수 · 현장 대기 · 행사장·학교·체육대회·축제 즉시 출동
               </p>
+              <p className="text-white/90 text-sm font-bold mt-1">
+                🛠️ 물놀이장·워터슬라이드 설치까지 원스톱 지원
+              </p>
             </div>
             <div className="flex flex-col gap-2 flex-shrink-0 w-full sm:w-auto">
               <a
