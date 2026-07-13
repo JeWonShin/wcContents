@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     title: "OK살수 | 평택 살수차·급수차 전문 – 즉시 배차",
     description:
       "경기 평택·안중 살수차·급수차 전문 업체. 공사현장 비산먼지, 조경급수, 식수운반, 비상출동. 즉시 배차 가능. 24시간 견적 접수.",
-    url: "https://jewonshin.github.io/wcContents/",
+    url: "https://ok살수.kr/",
     siteName: "OK살수",
     images: [
       {
-        url: "https://jewonshin.github.io/wcContents/hero-v2.jpeg",
+        url: "https://ok살수.kr/hero-v2.jpeg",
         width: 1200,
         height: 630,
         alt: "OK살수 살수차 작업 현장",
@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <head>
-        <link rel="icon" href="/wcContents/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -68,8 +68,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "OK살수",
-              image: "https://jewonshin.github.io/wcContents/hero-v2.jpeg",
-              url: "https://jewonshin.github.io/wcContents/",
+              image: "https://ok살수.kr/hero-v2.jpeg",
+              url: "https://ok살수.kr/",
               telephone: "+82-10-4894-5037",
               address: {
                 "@type": "PostalAddress",

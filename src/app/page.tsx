@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const PHONE = "010-4894-5037";
 const KAKAO = "https://open.kakao.com/o/sK8HVKAi";
-const BASE = "/wcContents";
+const BASE = "";
 
 const serviceCardsHome = [
   {
