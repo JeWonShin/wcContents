@@ -69,7 +69,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
           rel="stylesheet"
         />
-        <meta name="naver-site-verification" content="" />
+        <meta name="naver-site-verification" content="b7b63713ada31a0a71dd367c4b52018a9b14c2f2" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
