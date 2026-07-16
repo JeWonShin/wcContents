@@ -2,14 +2,14 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OK살수 | 살수차·급수차·물놀이장급수 전문 – 평택·화성·안성·오산·천안·아산",
+  title: "OK살수 | 평택·포승·안중·화성·오산·천안·아산 살수차 전문 – 즉시 배차",
   description:
-    "물이 필요한 곳! 어디라도 달려갑니다. 도로살수·조경급수·식수운반·비산먼지·비상출동·물놀이장급수·워터슬라이드급수. 여름 행사장·학교·체육대회·축제 즉시 출동. 평택·화성·안성·오산·천안·아산. 살수차 다량 보유. 24시간 견적 접수.",
+    "평택살수차·포승살수차·안중살수차·화성살수차·오산살수차·천안살수차·아산살수차 전문 OK살수. 도로살수·조경급수·식수운반·비산먼지·비상출동·물놀이장급수. 살수차 다량 보유, 즉시 배차. 24시간 견적 접수.",
 };
 
 const PHONE = "010-4894-5037";
 const KAKAO = "https://open.kakao.com/o/sK8HVKAi";
-const BASE = "/wcContents";
+const BASE = "";
 
 const serviceCardsHome = [
   {
@@ -122,7 +122,7 @@ const equipment = [
 const faq = [
   {
     q: "얼마나 빨리 출동할 수 있나요?",
-    a: "평택 기준 30분, 화성·안성·오산·천안·아산 기준 1시간 이내 도착을 목표로 합니다. 차량 위치·교통 상황에 따라 달라질 수 있으니 전화로 확인해 주세요.",
+    a: "평택(안중·포승·팽성·청북) 기준 30분, 화성·오산·안성·천안·아산 기준 1시간 이내 도착을 목표로 합니다. 차량 위치·교통 상황에 따라 달라질 수 있으니 전화로 확인해 주세요.",
   },
   {
     q: "야간·주말·공휴일에도 출동 가능한가요?",
@@ -145,13 +145,13 @@ export default function HomePage() {
       <div className="bg-red-600 text-white text-sm py-3 font-bold tracking-wide">
         <div className="sm:hidden overflow-hidden">
           <span className="announcement-ticker inline-block whitespace-nowrap">
-            📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
-            출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
+            📍 활동지역 &nbsp;·&nbsp; 평택(안중·포승·팽성·청북) · 화성 · 오산 · 안성 · 천안 · 아산
+            &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
           </span>
         </div>
         <div className="hidden sm:block text-center">
-          📍 활동지역 &nbsp;·&nbsp; 평택 · 안성 · 화성 · 오산 · 천안 · 아산 &nbsp;·&nbsp; 전지역
-          출동! &nbsp;·&nbsp;{" "}
+          📍 활동지역 &nbsp;·&nbsp; 평택(안중·포승·팽성·청북) · 화성 · 오산 · 안성 · 천안 · 아산
+          &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp;{" "}
           <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
             📞 {PHONE}
           </a>
@@ -206,9 +206,9 @@ export default function HomePage() {
                 활동지역
               </div>
               <div className="text-sm font-semibold text-white/90 leading-relaxed">
-                평택 · 안성 · 화성
+                평택(안중·포승·팽성·청북) · 화성 · 오산
                 <br />
-                오산 · 천안 · 아산
+                안성 · 천안 · 아산
               </div>
               <div className="text-xs font-bold text-yellow-200 mt-1">전지역 출동!</div>
             </div>
@@ -474,6 +474,53 @@ export default function HomePage() {
               💬 카카오톡 문의
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* ⑦-b 지역별 서비스 */}
+      <section className="py-12 bg-brand-bg border-t border-brand-light">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-8">
+            <h2 className="section-title">서비스 지역</h2>
+            <p className="section-subtitle">경기·충청 전 지역 살수차·급수차 즉시 출동</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            {[
+              { region: "평택 살수차", sub: "안중읍·포승읍·팽성읍·청북읍·오성면", highlight: true },
+              { region: "안중 살수차", sub: "안중읍 · 현덕면 · 포승읍", highlight: true },
+              { region: "포승 살수차", sub: "포승읍 · 경기평택항 일대", highlight: false },
+              { region: "화성 살수차", sub: "향남·남양·봉담·서신·우정", highlight: false },
+              { region: "오산 살수차", sub: "오산시 전지역", highlight: false },
+              { region: "안성 살수차", sub: "안성시 전지역", highlight: false },
+              { region: "천안 살수차", sub: "천안시 전지역", highlight: false },
+              { region: "아산 살수차", sub: "아산시 전지역", highlight: false },
+              { region: "수원·화성 살수차", sub: "수원·동탄·기흥 일대", highlight: false },
+            ].map((item) => (
+              <a
+                key={item.region}
+                href={`tel:${PHONE.replace(/-/g, "")}`}
+                className={`rounded-xl p-4 border transition-all hover:shadow-md ${
+                  item.highlight
+                    ? "bg-brand-primary text-white border-brand-primary"
+                    : "bg-white border-brand-light hover:border-brand-accent"
+                }`}
+              >
+                <div
+                  className={`font-black text-sm mb-1 ${item.highlight ? "text-yellow-300" : "text-brand-primary"}`}
+                >
+                  📍 {item.region}
+                </div>
+                <div
+                  className={`text-xs leading-relaxed ${item.highlight ? "text-blue-200" : "text-brand-gray"}`}
+                >
+                  {item.sub}
+                </div>
+              </a>
+            ))}
+          </div>
+          <p className="text-center text-xs text-brand-gray mt-5">
+            위 지역 외에도 출동 가능합니다. 문의 주시면 바로 확인해 드립니다.
+          </p>
         </div>
       </section>
 
