@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <img
-                src="/wcContents/logo.png"
+                src="/logo.png"
                 alt="OK살수 로고"
                 style={{ height: 40, width: "auto", filter: "brightness(0) invert(1)" }}
               />

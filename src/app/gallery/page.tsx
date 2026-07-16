@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-const BASE_PATH = "/wcContents";
+const BASE_PATH = "";
 
 type PhotoItem = {
   type: "photo";
