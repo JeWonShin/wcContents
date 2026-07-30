@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BIZ_NAME, PHONE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침 | OK살수",
@@ -11,9 +12,9 @@ export default function PrivacyPage() {
         <h1 className="text-2xl font-black text-brand-primary mb-6">개인정보처리방침</h1>
         <div className="prose prose-sm max-w-none text-gray-700 space-y-6">
           <p>
-            OK살수(이하 &quot;회사&quot;)는 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를
-            보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이 개인정보
-            처리방침을 수립·공개합니다.
+            {BIZ_NAME}(이하 &quot;회사&quot;)는 「개인정보 보호법」 제30조에 따라 정보주체의
+            개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 다음과 같이
+            개인정보 처리방침을 수립·공개합니다.
           </p>
 
           <div>
@@ -53,7 +54,7 @@ export default function PrivacyPage() {
             </h2>
             <div className="bg-brand-bg rounded-lg p-4 text-sm">
               <p>개인정보 보호책임자: 대표자</p>
-              <p>연락처: 010-4894-5037</p>
+              <p>연락처: {PHONE}</p>
             </div>
           </div>
 

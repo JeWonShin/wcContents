@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-
-const BASE_PATH = "";
+import { PHONE, PHONE_HREF, asset } from "@/lib/site";
 
 type PhotoItem = {
   type: "photo";
@@ -311,7 +310,7 @@ export default function GalleryPage() {
                 className="relative aspect-square rounded-xl overflow-hidden bg-gray-100"
               >
                 <Image
-                  src={`${BASE_PATH}${item.src}`}
+                  src={asset(item.src)}
                   alt={item.alt}
                   fill
                   className={`object-cover ${item.rotate ? rotateClass[item.rotate] : ""}`}
@@ -344,10 +343,10 @@ export default function GalleryPage() {
           <p className="text-xl font-bold mb-2">비슷한 현장이 있으신가요?</p>
           <p className="text-blue-200 text-sm mb-5">현장 사진을 보내주시면 맞춤 견적을 드립니다.</p>
           <a
-            href="tel:01048945037"
+            href={PHONE_HREF}
             className="inline-flex items-center gap-2 bg-phone text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:bg-green-600"
           >
-            📞 010-4894-5037
+            📞 {PHONE}
           </a>
         </div>
       </section>

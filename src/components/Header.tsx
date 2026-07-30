@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { PHONE, PHONE_HREF, asset } from "@/lib/site";
 
 const nav = [
   { href: "/", label: "홈" },
@@ -11,8 +12,6 @@ const nav = [
   { href: "/contact", label: "고객센터" },
 ];
 
-const PHONE = "010-4894-5037";
-
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -21,7 +20,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <img src="/logo.png" alt="OK살수 로고" style={{ height: 44, width: "auto" }} />
+          <img src={asset("/logo.png")} alt="OK살수 로고" style={{ height: 44, width: "auto" }} />
         </Link>
 
         {/* Desktop nav */}
@@ -36,7 +35,7 @@ export default function Header() {
         {/* Phone + hamburger */}
         <div className="flex items-center gap-3">
           <a
-            href={`tel:${PHONE.replace(/-/g, "")}`}
+            href={PHONE_HREF}
             className="hidden sm:flex items-center gap-1 text-brand-secondary font-bold text-base"
           >
             <span>📞</span>
@@ -56,7 +55,7 @@ export default function Header() {
       {open && (
         <div className="md:hidden bg-white border-t border-brand-light">
           <a
-            href={`tel:${PHONE.replace(/-/g, "")}`}
+            href={PHONE_HREF}
             className="flex items-center gap-2 px-4 py-3 text-brand-secondary font-bold border-b border-brand-light"
           >
             <span>📞</span> {PHONE}

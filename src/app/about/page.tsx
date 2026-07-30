@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BIZ_NAME, BIZ_REG_NO, KAKAO_URL, OWNER_NAME, PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "회사소개 | OK살수 – 살수차·급수차 전문",
@@ -27,7 +28,7 @@ const equipment = [
 const certs = [
   { icon: "🔬", label: "KOTITI 수질검사 필증", desc: "공인기관 수질 안전검사 통과" },
   { icon: "®️", label: "상표등록증", desc: "브랜드 상표 정식 등록" },
-  { icon: "📄", label: "사업자등록증", desc: "209-31-66281" },
+  { icon: "📄", label: "사업자등록증", desc: BIZ_REG_NO },
   { icon: "🚛", label: "화물자동차 운송사업 허가", desc: "관련 법령에 따른 운송 허가" },
 ];
 
@@ -65,7 +66,9 @@ export default function AboutPage() {
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="section-title border-l-4 border-brand-accent pl-3">대표 인사말</h2>
           <div className="card mt-4 space-y-4 text-gray-700 leading-relaxed">
-            <p>안녕하십니까. OK살수 대표 이준희입니다.</p>
+            <p>
+              안녕하십니까. {BIZ_NAME} 대표 {OWNER_NAME}입니다.
+            </p>
             <p>
               깨끗한 현장은 우연히 만들어지지 않습니다.
               <br />
@@ -94,7 +97,9 @@ export default function AboutPage() {
               <br />
               <strong>신뢰를 싣고 달립니다.</strong>
             </p>
-            <p className="text-brand-primary font-bold">OK살수 대표 이준희</p>
+            <p className="text-brand-primary font-bold">
+              {BIZ_NAME} 대표 {OWNER_NAME}
+            </p>
           </div>
         </div>
       </section>
@@ -194,11 +199,11 @@ export default function AboutPage() {
         <div className="max-w-xl mx-auto px-4 text-center text-white">
           <p className="text-xl font-bold mb-4">지금 바로 문의해 보세요</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:01048945037" className="btn-cta bg-phone">
+            <a href={PHONE_HREF} className="btn-cta bg-phone">
               📞 전화 상담
             </a>
             <a
-              href="https://open.kakao.com/o/sK8HVKAi"
+              href={KAKAO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta bg-kakao text-gray-900"

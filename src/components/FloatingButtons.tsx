@@ -1,14 +1,13 @@
 "use client";
 
-const PHONE = "010-4894-5037";
-const KAKAO_CHANNEL_URL = "https://open.kakao.com/o/sK8HVKAi";
+import { KAKAO_URL, PHONE_HREF } from "@/lib/site";
 
 export default function FloatingButtons() {
   return (
     <div className="fixed bottom-6 right-4 z-50 flex flex-col gap-2.5">
       {/* KakaoTalk */}
       <a
-        href={KAKAO_CHANNEL_URL}
+        href={KAKAO_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 bg-kakao text-gray-900 font-bold text-sm pl-3 pr-4 py-3 rounded-full shadow-xl transition-transform hover:scale-105 active:scale-95"
@@ -22,7 +21,7 @@ export default function FloatingButtons() {
 
       {/* Phone */}
       <a
-        href={`tel:${PHONE.replace(/-/g, "")}`}
+        href={PHONE_HREF}
         className="phone-ring flex items-center gap-2 bg-phone text-white font-bold text-sm pl-3 pr-4 py-3 rounded-full shadow-xl transition-transform hover:scale-105 active:scale-95"
         aria-label="전화 상담"
       >

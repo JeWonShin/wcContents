@@ -1,6 +1,15 @@
 import Link from "next/link";
-
-const PHONE = "010-4894-5037";
+import {
+  ADDRESS,
+  BIZ_NAME,
+  BIZ_REG_NO,
+  BIZ_TAX_TYPE,
+  KAKAO_URL,
+  OWNER_NAME,
+  PHONE,
+  PHONE_HREF,
+  asset,
+} from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -11,7 +20,7 @@ export default function Footer() {
           <div>
             <div className="mb-3">
               <img
-                src="/logo.png"
+                src={asset("/logo.png")}
                 alt="OK살수 로고"
                 style={{ height: 40, width: "auto", filter: "brightness(0) invert(1)" }}
               />
@@ -29,11 +38,11 @@ export default function Footer() {
             <ul className="space-y-2 text-brand-light text-sm">
               <li>
                 📞{" "}
-                <a href={`tel:${PHONE.replace(/-/g, "")}`} className="hover:text-white transition">
+                <a href={PHONE_HREF} className="hover:text-white transition">
                   {PHONE}
                 </a>
               </li>
-              <li>📍 경기도 평택시 안중읍 송담3로 56-15</li>
+              <li>📍 {ADDRESS}</li>
               <li>🕐 평일 08:00–20:00 | 24시간 견적 접수</li>
             </ul>
           </div>
@@ -54,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://open.kakao.com/o/sK8HVKAi"
+                  href={KAKAO_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition"
@@ -68,10 +77,10 @@ export default function Footer() {
 
         <div className="border-t border-brand-secondary pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-brand-light">
           <p>
-            상호: OK살수 | 대표: 이준희 | 사업자등록번호: 209-31-66281 | 일반과세자 |
+            상호: {BIZ_NAME} | 대표: {OWNER_NAME} | 사업자등록번호: {BIZ_REG_NO} | {BIZ_TAX_TYPE} |
             계좌이체·현금·세금계산서 발행
           </p>
-          <p>© 2026 OK살수. All rights reserved.</p>
+          <p>© 2026 {BIZ_NAME}. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { KAKAO_URL, PHONE, PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "서비스 안내 | OK살수 – 살수차·물놀이장급수·워터슬라이드급수·포크레인",
@@ -158,11 +159,11 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <div className="mt-6 flex gap-3">
-                  <a href="tel:01048945037" className="btn-cta text-sm whitespace-nowrap">
+                  <a href={PHONE_HREF} className="btn-cta text-sm whitespace-nowrap">
                     📞 전화 문의
                   </a>
                   <a
-                    href="https://open.kakao.com/o/sK8HVKAi"
+                    href={KAKAO_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn-cta bg-kakao text-gray-900 text-sm whitespace-nowrap"
@@ -184,8 +185,8 @@ export default function ServicesPage() {
             목록에 없는 작업도 문의해 주시면 최적의 방법을 안내해 드립니다.
           </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:01048945037" className="btn-cta bg-phone">
-              📞 010-4894-5037
+            <a href={PHONE_HREF} className="btn-cta bg-phone">
+              📞 {PHONE}
             </a>
             <Link href="/pricing" className="btn-cta bg-white text-brand-primary">
               💰 단가표 보기

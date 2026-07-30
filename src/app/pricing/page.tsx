@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { KAKAO_URL, PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "단가표 | OK살수 – 살수차·급수차 요금 안내",
@@ -132,11 +133,11 @@ export default function PricingPage() {
             현장 정보를 알려주시면 맞춤 견적을 바로 안내해 드립니다.
           </p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="tel:01048945037" className="btn-cta bg-phone">
+            <a href={PHONE_HREF} className="btn-cta bg-phone">
               📞 전화 견적
             </a>
             <a
-              href="https://open.kakao.com/o/sK8HVKAi"
+              href={KAKAO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta bg-kakao text-gray-900"

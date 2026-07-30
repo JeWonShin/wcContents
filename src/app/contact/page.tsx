@@ -1,4 +1,13 @@
 import type { Metadata } from "next";
+import {
+  ADDRESS,
+  HOURS,
+  KAKAO_CHANNEL,
+  KAKAO_URL,
+  PHONE,
+  PHONE_HREF,
+  hoursLabel,
+} from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "고객센터 | OK살수",
@@ -48,20 +57,20 @@ export default function ContactPage() {
           <h2 className="section-title border-l-4 border-brand-accent pl-3">연락처 안내</h2>
           <div className="space-y-4 mt-6">
             <a
-              href="tel:01048945037"
+              href={PHONE_HREF}
               className="flex items-center gap-4 card hover:border-brand-accent transition-colors"
             >
               <div className="w-12 h-12 rounded-full bg-phone flex items-center justify-center text-2xl text-white flex-shrink-0">
                 📞
               </div>
               <div>
-                <div className="font-bold text-brand-primary text-lg">010-4894-5037</div>
+                <div className="font-bold text-brand-primary text-lg">{PHONE}</div>
                 <div className="text-xs text-brand-gray">전화 한 통이면 즉시 연결됩니다</div>
               </div>
             </a>
 
             <a
-              href="https://open.kakao.com/o/sK8HVKAi"
+              href={KAKAO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 card hover:border-yellow-400 transition-colors"
@@ -71,14 +80,14 @@ export default function ContactPage() {
               </div>
               <div>
                 <div className="font-bold text-gray-800 text-lg">카카오톡 상담</div>
-                <div className="text-xs text-brand-gray">채널명: OK살수</div>
+                <div className="text-xs text-brand-gray">채널명: {KAKAO_CHANNEL}</div>
               </div>
             </a>
 
             <div className="grid sm:grid-cols-2 gap-4">
               <div className="card">
                 <div className="font-bold text-brand-primary mb-2">📍 위치</div>
-                <p className="text-sm text-gray-600">경기도 평택시 안중읍 송담3로 56-15</p>
+                <p className="text-sm text-gray-600">{ADDRESS}</p>
                 <p className="text-xs text-brand-gray mt-1">방문 상담 전 사전 연락 바랍니다.</p>
               </div>
 
@@ -88,19 +97,19 @@ export default function ContactPage() {
                   <tbody>
                     <tr>
                       <td className="text-gray-500 pr-3 py-0.5">평일</td>
-                      <td className="font-medium">08:00 – 20:00</td>
+                      <td className="font-medium">{hoursLabel(HOURS.weekday)}</td>
                     </tr>
                     <tr>
                       <td className="text-gray-500 pr-3 py-0.5">토요일</td>
-                      <td className="font-medium">08:00 – 18:00</td>
+                      <td className="font-medium">{hoursLabel(HOURS.saturday)}</td>
                     </tr>
                     <tr>
                       <td className="text-gray-500 pr-3 py-0.5">일·공휴일</td>
-                      <td className="font-medium">긴급 출동 가능 (할증 적용)</td>
+                      <td className="font-medium">{HOURS.holidayNote}</td>
                     </tr>
                     <tr>
                       <td className="text-gray-500 pr-3 py-0.5">카카오톡 접수</td>
-                      <td className="font-medium text-brand-accent">24시간</td>
+                      <td className="font-medium text-brand-accent">{HOURS.inquiryNote}</td>
                     </tr>
                   </tbody>
                 </table>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { KAKAO_URL, PHONE, PHONE_HREF, SERVICE_AREAS_BANNER, asset } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "OK살수 | 평택·포승·안중·화성·오산·천안·아산 살수차 전문 – 즉시 배차",
@@ -7,17 +8,13 @@ export const metadata: Metadata = {
     "평택살수차·포승살수차·안중살수차·화성살수차·오산살수차·천안살수차·아산살수차 전문 OK살수. 도로살수·조경급수·식수운반·비산먼지·비상출동·물놀이장급수. 살수차 다량 보유, 즉시 배차. 24시간 견적 접수.",
 };
 
-const PHONE = "010-4894-5037";
-const KAKAO = "https://open.kakao.com/o/sK8HVKAi";
-const BASE = "";
-
 const serviceCardsHome = [
   {
     icon: "🚒",
     title: "살수차",
     items: ["도로청소 / 비산먼지 저감", "용수공급", "긴급살수", "현장 살수작업"],
     href: "/services#construction",
-    photo: `${BASE}/gallery/salsu-road-new.jpeg`,
+    photo: asset("/gallery/salsu-road-new.jpeg"),
     gradient: "from-blue-950/50 to-blue-950/92",
   },
   {
@@ -25,7 +22,7 @@ const serviceCardsHome = [
     title: "조경·공원조성",
     items: ["공원조성 / 잔디·수목식재", "정원조성 / 조경시설 설치", "조경 유지관리"],
     href: "/services#landscape",
-    photo: `${BASE}/gallery/landscape-work-new.jpeg`,
+    photo: asset("/gallery/landscape-work-new.jpeg"),
     gradient: "from-emerald-950/50 to-emerald-950/92",
   },
   {
@@ -37,7 +34,7 @@ const serviceCardsHome = [
       "배수관 / 맨홀 / 오수받이 시공",
     ],
     href: "/services#excavator",
-    photo: `${BASE}/gallery/night-excavation.jpeg`,
+    photo: asset("/gallery/night-excavation.jpeg"),
     gradient: "from-amber-950/50 to-amber-950/92",
   },
   {
@@ -49,7 +46,7 @@ const serviceCardsHome = [
       "신속하고 안전한 운반 서비스",
     ],
     href: "/services#dump",
-    photo: `${BASE}/gallery/dump-truck-new.jpeg`,
+    photo: asset("/gallery/dump-truck-new.jpeg"),
     gradient: "from-slate-900/50 to-slate-950/92",
     objectPos: "60% center",
   },
@@ -134,7 +131,7 @@ const faq = [
   },
   {
     q: "살수차 외에 포크레인·조경공사도 문의할 수 있나요?",
-    a: "네, 포크레인 작업과 조경건설 시공도 문의 가능합니다. 모든 문의는 동일 번호(010-4894-5037)로 접수됩니다.",
+    a: `네, 포크레인 작업과 조경건설 시공도 문의 가능합니다. 모든 문의는 동일 번호(${PHONE})로 접수됩니다.`,
   },
 ];
 
@@ -145,14 +142,14 @@ export default function HomePage() {
       <div className="bg-red-600 text-white text-sm py-3 font-bold tracking-wide">
         <div className="sm:hidden overflow-hidden">
           <span className="announcement-ticker inline-block whitespace-nowrap">
-            📍 활동지역 &nbsp;·&nbsp; 평택(안중·포승·팽성·청북) · 화성 · 오산 · 안성 · 천안 · 아산
-            &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
+            📍 활동지역 &nbsp;·&nbsp; {SERVICE_AREAS_BANNER.join(" · ")} &nbsp;·&nbsp; 전지역 출동!
+            &nbsp;·&nbsp; 📞 {PHONE} &nbsp;&nbsp;&nbsp;
           </span>
         </div>
         <div className="hidden sm:block text-center">
-          📍 활동지역 &nbsp;·&nbsp; 평택(안중·포승·팽성·청북) · 화성 · 오산 · 안성 · 천안 · 아산
-          &nbsp;·&nbsp; 전지역 출동! &nbsp;·&nbsp;{" "}
-          <a href={`tel:${PHONE.replace(/-/g, "")}`} className="underline underline-offset-2">
+          📍 활동지역 &nbsp;·&nbsp; {SERVICE_AREAS_BANNER.join(" · ")} &nbsp;·&nbsp; 전지역 출동!
+          &nbsp;·&nbsp;{" "}
+          <a href={PHONE_HREF} className="underline underline-offset-2">
             📞 {PHONE}
           </a>
         </div>
@@ -161,7 +158,7 @@ export default function HomePage() {
       {/* ① Hero */}
       <section className="relative overflow-hidden bg-black">
         <img
-          src={`${BASE}/hero-v2.jpeg`}
+          src={asset("/hero-v2.jpeg")}
           alt="OK살수차 — 어디든 달려갑니다"
           className="w-full block"
         />
@@ -206,9 +203,9 @@ export default function HomePage() {
                 활동지역
               </div>
               <div className="text-sm font-semibold text-white/90 leading-relaxed">
-                평택(안중·포승·팽성·청북) · 화성 · 오산
+                {SERVICE_AREAS_BANNER.slice(0, 3).join(" · ")}
                 <br />
-                안성 · 천안 · 아산
+                {SERVICE_AREAS_BANNER.slice(3).join(" · ")}
               </div>
               <div className="text-xs font-bold text-yellow-200 mt-1">전지역 출동!</div>
             </div>
@@ -237,7 +234,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col gap-2 flex-shrink-0 w-full sm:w-auto">
               <a
-                href={`tel:${PHONE.replace(/-/g, "")}`}
+                href={PHONE_HREF}
                 className="flex items-center justify-center gap-2 bg-white text-blue-600 font-black px-6 py-3 rounded-xl shadow-lg hover:bg-blue-50 transition whitespace-nowrap"
               >
                 📞 지금 바로 문의
@@ -275,7 +272,7 @@ export default function HomePage() {
           </div>
           <div className="text-center">
             <a
-              href={`tel:${PHONE.replace(/-/g, "")}`}
+              href={PHONE_HREF}
               className="phone-ring inline-flex items-center gap-2 bg-phone text-white font-black text-lg px-10 py-4 rounded-xl shadow-lg hover:bg-green-600 active:scale-95 transition-all"
             >
               📞 지금 바로 전화하세요
@@ -283,7 +280,7 @@ export default function HomePage() {
             <p className="text-xs text-brand-gray mt-3">
               통화가 어려우신 경우&nbsp;
               <a
-                href={KAKAO}
+                href={KAKAO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline underline-offset-2 text-brand-secondary"
@@ -349,7 +346,7 @@ export default function HomePage() {
               </p>
             </div>
             <a
-              href={`tel:${PHONE.replace(/-/g, "")}`}
+              href={PHONE_HREF}
               className="flex-shrink-0 bg-phone text-white font-black px-6 py-3 rounded-xl hover:bg-green-600 transition whitespace-nowrap"
             >
               📞 지금 문의
@@ -404,7 +401,7 @@ export default function HomePage() {
           </div>
           <div className="text-center mt-8">
             <a
-              href={`tel:${PHONE.replace(/-/g, "")}`}
+              href={PHONE_HREF}
               className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold px-8 py-3 rounded-xl hover:bg-brand-secondary transition-colors shadow-sm"
             >
               📞 지금 문의하기
@@ -439,7 +436,7 @@ export default function HomePage() {
             <Link href="/about" className="btn-cta-outline text-sm">
               전체 장비 보기 →
             </Link>
-            <a href={`tel:${PHONE.replace(/-/g, "")}`} className="btn-cta text-sm">
+            <a href={PHONE_HREF} className="btn-cta text-sm">
               📞 배차 문의
             </a>
           </div>
@@ -466,7 +463,7 @@ export default function HomePage() {
               단가표 자세히 보기
             </Link>
             <a
-              href={KAKAO}
+              href={KAKAO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-cta bg-kakao text-gray-900 text-sm"
@@ -498,7 +495,7 @@ export default function HomePage() {
             ].map((item) => (
               <a
                 key={item.region}
-                href={`tel:${PHONE.replace(/-/g, "")}`}
+                href={PHONE_HREF}
                 className={`rounded-xl p-4 border transition-all hover:shadow-md ${
                   item.highlight
                     ? "bg-brand-primary text-white border-brand-primary"
@@ -534,13 +531,13 @@ export default function HomePage() {
           <p className="text-white/50 text-sm italic mb-8">깨끗한 현장의 시작, OK살수차!</p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
-              href={`tel:${PHONE.replace(/-/g, "")}`}
+              href={PHONE_HREF}
               className="phone-ring flex items-center justify-center gap-2 bg-phone text-white font-bold px-8 py-4 rounded-xl shadow-lg transition hover:bg-green-600 active:scale-95"
             >
               📞 {PHONE}
             </a>
             <a
-              href={KAKAO}
+              href={KAKAO_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-kakao text-gray-900 font-bold px-8 py-4 rounded-xl transition hover:brightness-95 active:scale-95"
